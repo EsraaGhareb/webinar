@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Webinar </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="RoQaY Company" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0" name="viewport" />
+    <meta name="description" content="Webinar  website" />
+    <meta name="keywords" content="Webinar  ,dashboard" />
+    <meta name="csrf-token" content="V2G8zLS7dL5HzdfwxaBDewvJvAKCyeThQE4NBtJv" />
+    <!-- <link rel="shortcut icon" href="assets/images/" type="image/x-icon" sizes="32*32" /> -->
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" media="all"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel='stylesheet' href='https://fullcalendar.io/releases/core/4.0.2/main.min.css'>
+    <link rel='stylesheet' href='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.css'>
+    <link rel='stylesheet' href='https://fullcalendar.io/releases/list/4.0.1/main.min.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" />
+</head>
+
+<body>
+    <div class="loading">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="body_wrapper">
+        <div class="nav-container">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg main-nav">
+                    <div>
+                        <a class="navbar-brand" href="#">
+                            <img data-src="assets/images/logo.png" src="assets/images/logo.png" class="lazyload logo"
+                                alt="">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler order-1" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="events.html">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html"> about us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item search-item">
+                                <a class="nav-link" href="JavaScript:Void(0);"> <i class="fas fa-search mx-2"></i>
+                                    search
+                                </a>
+                                <!-- <div class="search-form">
+                                <form action="#">
+                                    <input type="text" class="form-control">
+                                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center">
+
+                        <div class="auth-lnks d-flex">
+                            <a href="#" class="google-store">
+                                ar
+                            </a>
+                            <a href="#" class="app-store">
+                                en
+                            </a>
+
+                        </div>
+                        <button type="button" class="btn btn-primary text-white" data-toggle="modal"
+                            data-target="#loginModal">join now</button>
+                        <!-- after login -->
+                        <!-- <div class="media align-items-center profile-lnk">
+                            <img src="assets/images/person-icon.png" data-src="assets/images/person-icon.png" class="profile-icon lazyload" alt="">
+                            <div class="media-body">
+                                Israa Adel
+                            </div>
+                        </div> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <header id="header">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 col-md-7 align-self-center">
+                        <div class="site-descp">
+                            <h5 class="sub-title">Keep Learning</h5>
+                            <h1 class="site-title my-3"> Global knowledge and build your skills </h1>
+                          
+                            <div class="find-event-courses-form">  
+                                <h6 class=" my-3 pb-3"> Find events & courses </h6>
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-4 col-md-6 ">
+                                            <select name="Category" id="Category" class="form-control">
+                                                <option disabled hidden selected value="Category">Category</option>
+                                                <option value="category 1">category 1</option>
+                                                <option value="category 1">category 1</option>
+                                                <option value="category 1">category 1</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-lg-5 col-md-6 ">
+                                            <input type="text" class="form-control search" placeholder="Search for event ...">
+                                        </div>
+                                        <div class="form-group col-lg-3 col-md-6">
+                                            <button type="submit" class="btn btn-white mw-auto">
+                                                search
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="site-img">
+                            <img src="assets/images/homevector.png" data-src="assets/images/homevector.png"
+                                class="lazyload" alt="">
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <section class="content">
+            <section id="upcoming-events" class="upcoming-events">
+                <div class="container">
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="font-weight-bold sec-title text-center"> <span class="text-primary">Upcoming</span>
+                            Events </h3>
+                        <a href="#" class="btn btn-more btn-outline-primary">More Events</a>
+                    </div>
+
+                    <div class="row py-4 my-2" id="events-cards">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="event-card watchnow-card">
+                                <h5 class="card-title">Information Tech Course</h5>
+                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                    <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
+                                            2020</span> <span class="">20 : 45 PM</span></h6>
+                                    <h6 class="event-duration d-flex align-items-center mb-3 ">
+                                        <img src="assets/images/timer.svg" data-src="assets/images/timer.svg" class="lazyload icon" alt="">
+                                        <span class="">01 : 20 min</span>
+                                    </h6>
+                                </div>
+                                <div class="mt-3 media event-place align-items-center">
+                                    <img src="assets/images/new-horzion.png" data-src="assets/images/new-horzion.png"
+                                        class="lazyload " alt="">
+                                    <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                </div>
+                                <div class="mt-2 d-flex align-items-center justify-content-between">
+
+                                    <div class=" media event-admin align-items-center">
+                                        <img src="assets/images/person-icon.png"
+                                            data-src="assets/images/person-icon.png" class="lazyload" alt="">
+                                        <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                    </div>
+                                    <a href="#" class="btn btn-primary mw-auto mh-auto text-white">Watch now</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-4 col-md-6">
+                            <div class="event-card soon-card">
+                                <h5 class="card-title">Information Tech Course</h5>
+                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                    <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
+                                            2020</span> <span class="">20 : 45 PM</span></h6>
+                                    <h6 class="event-duration d-flex align-items-center mb-3 ">
+                                        <img src="assets/images/timer.svg" data-src="assets/images/timer.svg" class="lazyload icon" alt="">
+                                        <span class="">01 : 20 min</span>
+                                    </h6>
+                                </div>
+                                <div class="mt-3 media event-place align-items-center">
+                                    <img src="assets/images/new-horzion.png" data-src="assets/images/new-horzion.png"
+                                        class="lazyload " alt="">
+                                    <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                </div>
+                                <div class="mt-2 d-flex align-items-center justify-content-between">
+
+                                    <div class=" media event-admin align-items-center">
+                                        <img src="assets/images/person-icon.png"
+                                            data-src="assets/images/person-icon.png" class="lazyload" alt="">
+                                        <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                    </div>
+                                    <button class="btn btn-light-success mw-auto mh-auto " type="button" disabled>
+                                        <img src="assets/images/clock.svg" data-src="assets/images/clock.svg" class="lazyload icon" alt="">
+                                         <span class="">soon</span> 
+                                    </button>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-4 col-md-6">
+                            <div class="event-card soon-card">
+                                <h5 class="card-title">Information Tech Course</h5>
+                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                    <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
+                                            2020</span> <span class="">20 : 45 PM</span></h6>
+                                    <h6 class="event-duration d-flex align-items-center mb-3 ">
+                                        <img src="assets/images/timer.svg" data-src="assets/images/timer.svg" class="lazyload icon" alt="">
+                                        <span class="">01 : 20 min</span>
+                                    </h6>
+                                </div>
+                                <div class="mt-3 media event-place align-items-center">
+                                    <img src="assets/images/new-horzion.png" data-src="assets/images/new-horzion.png"
+                                        class="lazyload " alt="">
+                                    <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                </div>
+                                <div class="mt-2 d-flex align-items-center justify-content-between">
+
+                                    <div class=" media event-admin align-items-center">
+                                        <img src="assets/images/person-icon.png"
+                                            data-src="assets/images/person-icon.png" class="lazyload" alt="">
+                                        <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                    </div>
+                                    <button class="btn btn-light-success mw-auto mh-auto " type="button" disabled>
+                                        <img src="assets/images/clock.svg" data-src="assets/images/clock.svg" class="lazyload icon" alt="">
+                                         <span class="">soon</span> 
+                                    </button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div>
+            </section>
+            <section class="calendar-sec ">
+                <div class="container">
+                    <h3 class="font-weight-bold sec-title font-lg text-center mb-3"> Find <span class="text-primary">Events</span> </h3>
+                    <p class="sec-slug text-center font-weight-medium ">
+                        Find events & courses By Date And Time                   
+                    </p>
+                    <div class="find-event-form">
+                        <form>
+                            <div class="form-row justify-content-center align-items-center">
+                                <div class="form-group col-lg-3 col-md-6 ">
+                                    <input type="text" class="form-control datepicker" placeholder="Date">
+                                </div>
+                                <div class="form-group col-lg-3 col-md-6 ">
+                                    <input type="text" class="form-control timepicker" placeholder="Time">
+                                </div>
+                                <div class="form-group col-lg-2 col-md-6">
+                                    <button type="submit" class="btn btn-primary text-white">
+                                        find Event
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="calendar" style="height: 800px;"></div>
+                </div>
+            </section>
+            <section class="courses-categories-sec text-center">
+                <div class="container">
+                    <h3 class="font-weight-bold sec-title text-center"> Courses Categories </h3>
+                    <div class="py-4 my-3">
+                        <div class="row no-gutters">
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/Sales-and-marketing.png"
+                                        data-src="assets/images/Sales-and-marketing.png" class="lazyload course-icon">
+                                    <h3 class="course-title">Sales and marketing</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/Employment&technicians.png"
+                                        data-src="assets/images/Employment&technicians.png"
+                                        class="lazyload course-icon">
+                                    <h3 class="course-title">Employment & technicians</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/Administrative-work.png"
+                                        data-src="assets/images/Sales-and-marketing.png" class="lazyload course-icon">
+                                    <h3 class="course-title">Administrative work</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/information-technology.png"
+                                        data-src="assets/images/information-technology.png"
+                                        class="lazyload course-icon">
+                                    <h3 class="course-title">Information Technology</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/Chef.png" data-src="assets/images/Chef.png"
+                                        class="lazyload course-icon">
+                                    <h3 class="course-title">Chef</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/Education&teaching.png"
+                                        data-src="assets/images/Education&teaching.png" class="lazyload course-icon">
+                                    <h3 class="course-title">Education & teaching</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/Medical-services.png"
+                                        data-src="assets/images/Medical-services.png" class="lazyload course-icon">
+                                    <h3 class="course-title">Medical services</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 course-card">
+                                <div class="course-item">
+                                    <img src="assets/images/Engineering.png" data-src="assets/images/Engineering.png"
+                                        class="lazyload course-icon">
+                                    <h3 class="course-title">Engineering</h3>
+                                    <h6 class="courses-number">50 course</h6>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="counter-sec py-5 text-center">
+                <div class="container">
+                    <div class="row no-gutter w-75 m-auto">
+                        <div class=" col-lg-3 col-md-6 counter ">
+                            <span class="timer" data-to="520" data-speed="10000"> 520</span>
+                            <label class="d-block">Daily Visits</label>
+                        </div>
+                        <div class=" col-lg-3 col-md-6 counter">
+                            <span class="timer" data-to="7130" data-speed="10000"> 7130</span>
+                            <label class="d-block">Users</label>
+                        </div>
+                        <div class=" col-lg-3 col-md-6 counter">
+                            <span class="timer" data-to="487" data-speed="10000"> 487</span>
+                            <label class="d-block">Sharing</label>
+                        </div>
+                        <div class=" col-lg-3 col-md-6 counter">
+                            <span class="timer" data-to="8796" data-speed="10000"> 8796</span>
+                            <label class="d-block">Interaction</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subscribe-sec">
+                <div class="row no-gutters">
+                    <div class="col-lg-5">
+                        <div class="bg-primary text-white sec-decp">
+                            <h1 class="sec-title">Keep Connecting, Subscribe Now!</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="subscribe-form p-5">
+                            <form action="#">
+
+                                <h4 class="font-weight-bold mb-2">Enter Your Email Address</h4>
+                                <div class="form-group form-inline my-3">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <button class="btn btn-primary text-white">Send</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sponsers-section text-center py-5">
+                <div class="container">
+                    <h5 class="text-primary">Our Sponsers</h5>
+                    <h3 class="sec-title text- text-center">Sponsers we love to deal with </h3>
+                    <div class="sponsers-slider owl-carousel">
+                        <div class="sponser-logo">
+                            <img src="assets/images/piktab.png" data-src="assets/images/piktab.png" class="lazyload"
+                                alt="sponser logo">
+                        </div>
+                        <div class="sponser-logo">
+                            <img src="assets/images/piktab.png" data-src="assets/images/piktab.png" class="lazyload"
+                                alt="sponser logo">
+                        </div>
+                        <div class="sponser-logo">
+                            <img src="assets/images/piktab.png" data-src="assets/images/piktab.png" class="lazyload"
+                                alt="sponser logo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class=" col-lg-6 col-md-6">
+                            <div class="footer-descp">
+                                <img src="assets/images/logo.png" data-src="assets/images/logo.png"
+                                    class="lazyload footer-logo" alt="">
+
+                                <div class="my-4 w-75 descp">
+                                    <p>To anyone who seeks to develop, learn and learn, we make it easy for you to reach
+                                        through us, just look for what you want.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <h5 class="footer-title"> links</h5>
+                            <ul class="footer-links ">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Events </a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact Us </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=" col-lg-3 col-sm-6">
+                            <div class="">
+
+                                <h5 class="footer-title ">Contact us</h5>
+                                <ul class="footer-links">
+
+                                    <li><a href="mailto:home@info.com">home@info.com</a></li>
+                                    <li><a href="tel:+0102548965875">0102548965875</a></li>
+                                    <li><a href="tel:+0102548965875">0102548965875</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrights-social">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copy-rights">
+                                <p> Copyright © 2021 All rights reserved. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="social-links d-flex justify-content-end align-self-end">
+
+                                <li>
+                                    <a class="facebook" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="linkedin" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="linkedin">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="pinterest" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="pinterest">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- login modal -->
+
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Login To iWebinar </h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="login-form">
+
+                            <form action="">
+                                <div class="form-group ">
+                                    <input type="email" id="InputEmail" class="form-control"
+                                        placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="inputPassword" class="form-control"
+                                        placeholder="Password">
+                                </div>
+                                <div class="text-center py-2">
+                                    <button type="submit" class="text-white btn btn-primary w-100">
+                                        Log In
+                                    </button>
+                                </div>
+                            </form>
+                            <a href="#" class="text-center w-100 text-black-50 mt-3">forget Your Password ?</a>
+                            <div class="text-black-50 text-center mt-2 line-b4">
+                                Don't have an account yet? <a href="JavaScript:Void(0);" class="text-primary"
+                                    data-toggle="modal" data-target="#signUpModal">Create
+                                    Account</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sign Up modal -->
+
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h3 class="modal-title">signUp To iWebinar </h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="signUp-form">
+
+                            <form action="">
+                                <div class="form-group ">
+                                    <input type="text" id="InputUserName" class="form-control" placeholder="User Name">
+                                </div>
+                                <div class="form-group ">
+                                    <input type="email" id="InputEmail" class="form-control"
+                                        placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="inputPassword" class="form-control"
+                                        placeholder="Password">
+                                </div>
+                                <div class="text-center py-2">
+                                    <button type="submit" class="text-white btn btn-primary w-100">
+                                        Log In
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="text-center w-100 text-black-50 mt-3 w-90 mx-auto">
+                                By signing up, you agree to the Terms & Conditions and Privacy Policy. You'll also
+                                receive our newsletter, which you can unsubscribe to at any time.
+                            </div>
+                            <div class="text-black-50 text-center mt-2 line-b4">
+                                Already have an account? <a href="JavaScript:Void(0);" class="text-primary"
+                                    data-toggle="modal" data-target="#loginModal">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- partial -->
+    <script src='https://fullcalendar.io/releases/core/4.0.2/main.min.js'></script>
+    <script src='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.js'></script>
+    <script src='https://fullcalendar.io/releases/list/4.0.1/main.min.js'></script>
+    <script src='https://fullcalendar.io/releases/google-calendar/4.0.1/main.min.js'></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid', 'list', 'googleCalendar'],
+                header: {
+                    left: 'prev',
+                    center: 'title',
+                    right: 'next'
+                },
+
+                displayEventTime: false, // don't show the time column in list view
+
+                // THIS KEY WON'T WORK IN PRODUCTION!!!
+                // To make your own Google API key, follow the directions here:
+                // http://fullcalendar.io/docs/google_calendar/
+                googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+
+                // US Holidays
+                events: 'en.usa#holiday@group.v.calendar.google.com',
+
+                eventClick: function (arg) {
+
+                    // opens events in a popup window
+                    // window.open(arg.event.url, '_blank', 'width=700,height=600');
+
+                    // prevents current tab from navigating
+                    arg.jsEvent.preventDefault();
+                }
+
+            });
+
+            calendar.render();
+        });
+    </script>
+
+</body>
+
+</html>
