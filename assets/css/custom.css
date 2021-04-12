@@ -11166,7 +11166,7 @@ img {
   -ms-transform: rotate(-45deg) !important;
   -o-transform: rotate(-45deg) !important;
   bottom: 16px;
-  right: 19%;
+  right: 16%;
   width: 30px;
 }
 
@@ -12371,7 +12371,7 @@ header,
     overflow-y: auto;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 110;
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -12405,6 +12405,16 @@ header,
     height: auto;
     background-color: #fff;
   }
+  .navbar .btn {
+    padding: 4px 10px !important;
+  }
+  .navbar-brand {
+    margin-right: 5px;
+  }
+  .navbar-brand img {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
   .course-card:nth-child(1) {
     border-top: 0 !important;
   }
@@ -12419,6 +12429,13 @@ header,
   }
   .course-card:nth-child(even) {
     border-right: 0;
+  }
+  .site-img img {
+    height: 100%;
+    max-height: 200px;
+  }
+  .navbar .auth-lnks a {
+    padding: 0.5rem 0.2rem;
   }
 }
 
