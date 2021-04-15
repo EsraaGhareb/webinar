@@ -84,6 +84,7 @@ ul {
 
 a {
     color: $black;
+    display: inline-block;
 
     &,
     &:hover,
@@ -91,7 +92,6 @@ a {
     &:active,
     &:visited {
         cursor: pointer;
-        display: inline-block;
         outline: none;
         text-decoration: none;
         transition: map_get($transition, main);
@@ -533,6 +533,23 @@ img {
     }
 }
 
+.bordered-title {
+    position: relative;
+    padding-bottom: 9px;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+        content: "";
+        border: 1px solid theme-color(primary);
+
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
 .font-weight-medium {
     font-weight: 600;
 }
@@ -548,87 +565,100 @@ img {
     padding: 70px 0;
     background: #fff;
 
-    .event-card {
-        background-color: #F7F7F7;
-        padding: 22px 20px;
-        height: calc(100% - 20px);
-        margin: 10px 0px;
-        border-radius: 17px;
-        -webkit-border-radius: 17px;
-        -moz-border-radius: 17px;
-        -ms-border-radius: 17px;
-        -o-border-radius: 17px;
 
-        &.watchnow-card {
-            background-color: #FFFAF7;
+}
+
+.event-card {
+    background-color: #FDFDFD;
+    padding: 22px 20px;
+    height: calc(100% - 20px);
+    margin: 10px 0px;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+
+    &.watchnow-card {
+        background-color: #FFFAF7;
+    }
+
+    &.soon-card {
+        background-color: #FBFBFE;
+    }
+
+    .card-title {
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    img {
+        width: 35px;
+        height: 35px;
+        // margin-right: 10px;
+        padding: 3px;
+
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+
+        &.icon {
+            width: auto;
+            height: 25px;
+
         }
+    }
 
-        &.soon-card {
-            background-color: #FBFBFE;
-        }
+    .event-img {
+        height: 140px;
+        width: 140px;
+        margin: auto;
+        display: block;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+}
 
-        .card-title {
-            font-size: 21px;
-            font-weight: 600;
+    .event-date {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .event-admin {
+        h6 {
+            font-size: 14px;
         }
 
         img {
-            width: 35px;
-            height: 35px;
-            // margin-right: 10px;
-            padding: 3px;
-
-            border-radius: 9px;
-            -webkit-border-radius: 9px;
-            -moz-border-radius: 9px;
-            -ms-border-radius: 9px;
-            -o-border-radius: 9px;
-
-            &.icon {
-                width: auto;
-                height: 25px;
-
-            }
+            background-color: #FF9999;
         }
-
-        .event-date {
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .event-admin {
-            h6 {
-                font-size: 14px;
-            }
-
-            img {
-                background-color: #FF9999;
-            }
-        }
-
-        .event-duration {
-            font-size: 13px;
-            font-weight: 500;
-            color: #808191;
-            background-color: $gray-200;
-            padding: 5px;
-            border-radius: 3px;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            -ms-border-radius: 3px;
-            -o-border-radius: 3px;
-
-            i,
-            svg {
-                font-size: 16px;
-                margin: 0 3px;
-            }
-        }
-
     }
 
+    .event-duration {
+        font-size: 13px;
+        font-weight: 500;
+        color: #808191;
+        background-color: $gray-200;
+        padding: 5px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+
+        i,
+        svg {
+            font-size: 16px;
+            margin: 0 3px;
+        }
+    }
 
 }
+
 
 // calendar
 .calendar-sec {
@@ -1017,6 +1047,68 @@ img {
 }
 
 // End contact us
+// Start Profile
+.personal-profile-pg {
+    .form-control {
+        background-color: #F7F7F7;
+        border-color: #E4E4E5;
+        min-height: 50px !important;
+    }
+
+    #profile-tab {
+        .nav-link {
+            background-color: $white;
+            color: $black;
+        }
+
+        .nav-link.active {
+            background-color: theme-color-level(primary, -10);
+            color: theme-color(primary);
+        }
+    }
+}
+
+.file-upload-wrapper {
+
+    border-bottom: 2px solid #DBDCFF;
+    padding-bottom: 10px;
+
+    input[type='file'] {
+        opacity: 0;
+        display: none;
+    }
+
+    img {
+        display: block;
+        padding: 10px;
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        background-color: #DBDCFF;
+        object-fit: contain;
+        border-radius: 13px;
+        -webkit-border-radius: 13px;
+        -moz-border-radius: 13px;
+        -ms-border-radius: 13px;
+        -o-border-radius: 13px;
+    }
+}
+
+.profile-card {
+
+    background-color: #FBFBFE;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+    .email {
+        word-break: break-all;
+    }
+}
+
+// End Profile
 
 .btn {
     min-width: 150px;

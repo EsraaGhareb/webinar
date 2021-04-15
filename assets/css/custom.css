@@ -10907,11 +10907,11 @@ ul {
 
 a {
   color: #000;
+  display: inline-block;
 }
 
 a, a:hover, a:focus, a:active, a:visited {
   cursor: pointer;
-  display: inline-block;
   outline: none;
   text-decoration: none;
   -webkit-transition: all 0.3s linear;
@@ -11384,6 +11384,27 @@ img {
   font-size: 40px;
 }
 
+.bordered-title {
+  position: relative;
+  padding-bottom: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bordered-title::after {
+  content: "";
+  border: 1px solid #FD8122;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .font-weight-medium {
   font-weight: 600;
 }
@@ -11399,8 +11420,8 @@ img {
   background: #fff;
 }
 
-.upcoming-events .event-card {
-  background-color: #F7F7F7;
+.event-card {
+  background-color: #FDFDFD;
   padding: 22px 20px;
   height: calc(100% - 20px);
   margin: 10px 0px;
@@ -11411,20 +11432,20 @@ img {
   -o-border-radius: 17px;
 }
 
-.upcoming-events .event-card.watchnow-card {
+.event-card.watchnow-card {
   background-color: #FFFAF7;
 }
 
-.upcoming-events .event-card.soon-card {
+.event-card.soon-card {
   background-color: #FBFBFE;
 }
 
-.upcoming-events .event-card .card-title {
+.event-card .card-title {
   font-size: 21px;
   font-weight: 600;
 }
 
-.upcoming-events .event-card img {
+.event-card img {
   width: 35px;
   height: 35px;
   padding: 3px;
@@ -11435,25 +11456,37 @@ img {
   -o-border-radius: 9px;
 }
 
-.upcoming-events .event-card img.icon {
+.event-card img.icon {
   width: auto;
   height: 25px;
 }
 
-.upcoming-events .event-card .event-date {
+.event-card .event-img {
+  height: 140px;
+  width: 140px;
+  margin: auto;
+  display: block;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.event-card .event-date {
   font-size: 14px;
   font-weight: 500;
 }
 
-.upcoming-events .event-card .event-admin h6 {
+.event-card .event-admin h6 {
   font-size: 14px;
 }
 
-.upcoming-events .event-card .event-admin img {
+.event-card .event-admin img {
   background-color: #FF9999;
 }
 
-.upcoming-events .event-card .event-duration {
+.event-card .event-duration {
   font-size: 13px;
   font-weight: 500;
   color: #808191;
@@ -11466,8 +11499,8 @@ img {
   -o-border-radius: 3px;
 }
 
-.upcoming-events .event-card .event-duration i,
-.upcoming-events .event-card .event-duration svg {
+.event-card .event-duration i,
+.event-card .event-duration svg {
   font-size: 16px;
   margin: 0 3px;
 }
@@ -11859,6 +11892,61 @@ img {
 .contact-us-form .text-descp {
   max-width: 400px;
   font-size: 20px;
+}
+
+.personal-profile-pg .form-control {
+  background-color: #F7F7F7;
+  border-color: #E4E4E5;
+  min-height: 50px !important;
+}
+
+.personal-profile-pg #profile-tab .nav-link {
+  background-color: #fff;
+  color: #000;
+}
+
+.personal-profile-pg #profile-tab .nav-link.active {
+  background-color: #ffe6d3;
+  color: #FD8122;
+}
+
+.file-upload-wrapper {
+  border-bottom: 2px solid #DBDCFF;
+  padding-bottom: 10px;
+}
+
+.file-upload-wrapper input[type='file'] {
+  opacity: 0;
+  display: none;
+}
+
+.file-upload-wrapper img {
+  display: block;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  background-color: #DBDCFF;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+}
+
+.profile-card {
+  background-color: #FBFBFE;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.profile-card .email {
+  word-break: break-all;
 }
 
 .btn {
