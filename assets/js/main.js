@@ -84,7 +84,7 @@ if ($("body").css("direction") == "rtl") {
     slideBy: 1,
     center: !0,
     autoplayHoverPause: !0,
-    mouseDrag: !0, 
+    mouseDrag: !0,
     nav: !1,
     dots: !1,
     stagePadding: 10,
@@ -112,18 +112,30 @@ if ($("body").css("direction") == "rtl") {
       },
     },
   });
-  // $(function() {
-  //   return $(".modal").on("show.bs.modal", function() {
-  //     var curModal;
-  //     curModal = this;
-  //     $('body').toggleClass("modal-open");
-  //     $(".modal").each(function() {
-  //       if (this !== curModal) {
-  //         $(this).modal("hide");
-  //       }
-  //     });
-  //   });
+  $(function () {
+    return $(".modal").on("show.bs.modal", function () {
+      var curModal;
+      curModal = this; 
+
+      $(".modal").each(function () { 
+        if (this !== curModal) {
+          $(this).modal("hide"); 
+        } 
+      });
+      if ($('.modal:visible').length) {
+        $('body').addClass('modal-open');
+      }
+    });
+  });
+  // $('#signUpModal').on('hidden.bs.modal', function () {
+  //   // Load up a new modal...
+  //   $('#loginModal').modal('show')
+  // })
+  // $('#loginModal').on('hidden.bs.modal', function () {
+  //   // Load up a new modal...
+  //   $('#signUpModal').modal('show')
   // });
+
   // counter js 
   $('.counter').each(function () {
     let counter = $(this).find(".timer");
@@ -138,15 +150,15 @@ if ($("body").css("direction") == "rtl") {
     });
   });
   // filter-display-shape
-  $('.filter-display-shape .btn').on('click', function(){
-     
+  $('.filter-display-shape .btn').on('click', function () {
+
     let cur_btn = $(this);
-    if(cur_btn.hasClass('list-display')){
+    if (cur_btn.hasClass('list-display')) {
       $('.events-cards').find('.col-lg-6').addClass('col-lg-12').removeClass('col-lg-6');
       $(this).addClass('active');
       $(".column-display").removeClass('active');
 
-    }else if(cur_btn.hasClass('column-display')){
+    } else if (cur_btn.hasClass('column-display')) {
       $('.events-cards').find('.col-lg-12').addClass('col-lg-6').removeClass('col-lg-12');
       $(this).addClass('active');
       $(".list-display").removeClass('active');
