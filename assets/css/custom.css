@@ -11099,6 +11099,72 @@ img {
   background-color: #dee2e6;
 }
 
+.OR {
+  display: block;
+  z-index: 1;
+  position: relative;
+  background-color: #fff;
+  color: #adb5bd;
+}
+
+.OR::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: -2;
+  bottom: 8px;
+  width: 100%;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.OR::before {
+  content: "";
+  position: relative;
+  z-index: -1;
+  width: 40px;
+  height: 25px;
+  display: block;
+  margin: auto;
+  margin-bottom: -30px;
+  background-color: #fff;
+}
+
+.socail-logins .btn {
+  border: 1px solid #e9ecef;
+  margin: 5px;
+  color: #fff;
+}
+
+.socail-logins .btn i,
+.socail-logins .btn svg {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.socail-logins .facebook {
+  background-color: #2877B5;
+}
+
+.socail-logins .google {
+  background-color: #DB4437;
+}
+
+.socail-logins .youtube {
+  background-color: #FF0000;
+}
+
+.socail-logins .twitter {
+  background-color: #1DA1F2;
+}
+
+.socail-logins .instagram {
+  background-color: #cd486b;
+}
+
+.socail-logins .linkedin {
+  background-color: #0072b1;
+}
+
 /* menu togglar button */
 .navbar-toggler {
   padding: 0;
@@ -11387,13 +11453,6 @@ img {
 .bordered-title {
   position: relative;
   padding-bottom: 9px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -11407,14 +11466,28 @@ img {
   left: 0;
 }
 
-.font-weight-medium {
-  font-weight: 600;
-}
-
 .sec-slug {
   max-width: 500px;
   margin: auto;
   font-size: 18px;
+}
+
+.font-weight-medium {
+  font-weight: 600;
+}
+
+.rounded {
+  border-radius: 0.75rem !important;
+  -moz-border-radius: 0.75rem !important;
+  -ms-border-radius: 0.75rem !important;
+  -o-border-radius: 0.75rem !important;
+  -webkit-border-radius: 0.75rem !important;
+}
+
+.scrolled-card {
+  max-height: 150vh;
+  overflow-y: auto;
+  padding: 15px;
 }
 
 .upcoming-events {
@@ -11513,6 +11586,158 @@ img {
 .event-card .event-duration svg {
   font-size: 16px;
   margin: 0 3px;
+}
+
+.event-main-img {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.event-main-img img {
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.event-main-img .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.458)), to(transparent));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.458), transparent);
+}
+
+.countdown {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.countdown span {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.countdown .count-item {
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.478);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.countdown .count-item .number {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+details.event-place-details[open] {
+  background-color: #f8f9fa;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+details.event-admin-details {
+  background-color: #f8f9fa;
+  position: relative;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+details.event-admin-details summary::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 20px;
+  height: 100%;
+  background: no-repeat center/15px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAOVBMVEUAAACAgICJiYmSkpKAgJ+BgY+AgZGAgJKBgZKAgo+AgZCAgJGAgJGAgZB/gZGAgZF/gZCAgpH////ayDNCAAAAEnRSTlMADA0OEJCSk5iZmpvFxufn6eq+T+OpAAAAAWJLR0QSe7xsAAAAAEdJREFUGNNjYKAi4GFG5bPwMrAJsiCLMPFzMaCKMYJEUMQY+bggDLgYIx8nTBIqhiQCFUMRAYuhiTAwcAsIcKA7mZ2VgQYAADtDAcvjns0qAAAAAElFTkSuQmCC");
+}
+
+details.event-admin-details[open] summary::after {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+details.event-admin-details .event-admin .icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+details.event-admin-details > div {
+  margin-left: 65px;
+}
+
+summary {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rate {
+  color: #808191;
+}
+
+.rate .active {
+  color: #FFCC00;
+}
+
+.rate .reviews-nums {
+  color: #adb5bd;
+}
+
+.tags-list li {
+  padding-right: 10px;
+  margin: 5px;
+}
+
+.tags-list li:not(:first-child) {
+  padding: 0 10px;
+  border-left: 1px solid #000;
 }
 
 .calendar-sec {
@@ -12249,6 +12474,64 @@ select.form-control {
   color: #FD8122;
 }
 
+.social-links li {
+  margin: 5px 8px;
+}
+
+.social-links li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.social-links i,
+.social-links svg {
+  font-size: 16px;
+}
+
+.social-links .facebook {
+  color: #2877B5;
+  background-color: #2877B51a;
+}
+
+.social-links .youtube {
+  color: #FF0000;
+  background-color: #FF00001a;
+}
+
+.social-links .twitter {
+  color: #1DA1F2;
+  background-color: #1DA1F21a;
+}
+
+.social-links .instagram {
+  color: #cd486b;
+  background-color: #cd486b1a;
+}
+
+.social-links .linkedin {
+  color: #0072b1;
+  background-color: #0072b11a;
+}
+
+.social-links .pinterest {
+  color: #E60023;
+  background-color: #E600231a;
+}
+
 footer {
   color: #000;
   background-color: #FDFDFF;
@@ -12296,70 +12579,12 @@ footer .copyrights-social {
 }
 
 footer .copyrights-social .social-links {
+  padding-left: 30px;
+  border-left: 1px solid #dee2e6;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
-  padding-left: 30px;
-  border-left: 1px solid #dee2e6;
-}
-
-footer .copyrights-social .social-links li {
-  margin: 5px 8px;
-}
-
-footer .copyrights-social .social-links li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-footer .copyrights-social .social-links i,
-footer .copyrights-social .social-links svg {
-  font-size: 16px;
-}
-
-footer .copyrights-social .social-links .facebook {
-  color: #2877B5;
-  background-color: #2877B51a;
-}
-
-footer .copyrights-social .social-links .youtube {
-  color: #FF0000;
-  background-color: #FF00001a;
-}
-
-footer .copyrights-social .social-links .twitter {
-  color: #1DA1F2;
-  background-color: #1DA1F21a;
-}
-
-footer .copyrights-social .social-links .instagram {
-  color: #cd486b;
-  background-color: #cd486b1a;
-}
-
-footer .copyrights-social .social-links .linkedin {
-  color: #0072b1;
-  background-color: #0072b11a;
-}
-
-footer .copyrights-social .social-links .pinterest {
-  color: #E60023;
-  background-color: #E600231a;
 }
 
 a,

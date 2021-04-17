@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Webinar </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="RoQaY Company" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0" name="viewport" />
+    <meta name="description" content="Webinar  website" />
+    <meta name="keywords" content="Webinar  ,dashboard" />
+    <meta name="csrf-token" content="V2G8zLS7dL5HzdfwxaBDewvJvAKCyeThQE4NBtJv" />
+    <!-- <link rel="shortcut icon" href="assets/images/" type="image/x-icon" sizes="32*32" /> -->
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" media="all"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel='stylesheet' href='https://fullcalendar.io/releases/core/4.0.2/main.min.css'>
+    <link rel='stylesheet' href='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.css'>
+    <link rel='stylesheet' href='https://fullcalendar.io/releases/list/4.0.1/main.min.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" />
+</head>
+
+<body>
+    <div class="loading">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="body_wrapper">
+        <div class="nav-container">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg main-nav">
+                    <div>
+                        <a class="navbar-brand" href="#">
+                            <img data-src="assets/images/logo.png" src="assets/images/logo.png" class="lazyload logo"
+                                alt="">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler order-1" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="events.html">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="about-us.html"> about us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="contact-us.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item search-item">
+                                <a class="nav-link" href="JavaScript:Void(0);"> <i class="fas fa-search mx-2"></i>
+                                    search
+                                </a>
+                                <!-- <div class="search-form">
+                                <form action="#">
+                                    <input type="text" class="form-control">
+                                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center">
+
+                        <div class="auth-lnks d-flex">
+                            <a href="#" class="google-store">
+                                ar
+                            </a>
+                            <a href="#" class="app-store">
+                                en
+                            </a>
+
+                        </div>
+                        <button type="button" class="btn btn-primary text-white" data-toggle="modal"
+                            data-target="#loginModal">join now</button>
+                        <!-- after login -->
+                        <!-- <a href="profile.html" class="media align-items-center profile-lnk">
+                            <img src="assets/images/person-icon.png" data-src="assets/images/person-icon.png" class="profile-icon lazyload" alt="">
+                            <div class="media-body">
+                                Israa Adel
+                            </div>
+                        </a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+        <header id="breadcrumb-header" aria-label="breadcrumb"
+            class="text-center d-flex justify-content-center flex-column align-items-center">
+            <div class="container">
+                <h1 class="font-weight-medium">Events</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="events.html">Events</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Events Detials</li>
+                </ol>
+            </div>
+        </header>
+        <section class="content">
+            <section id="event-details-pg" class="event-details-pg py-5 my-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="event-details">
+                                <div class="event-main-img">
+                                    <img src="assets/images/post-1.jpg" data-src="assets/images/post-1.jpg"
+                                        class="lazyload" alt="">
+                                    <div class="overlay">
+
+
+                                        <div class="countdown">
+                                            <div class="countdown__days count-item">
+                                                <div class="number"></div>
+                                                <span class>Days</span>
+                                            </div>
+
+                                            <div class="countdown__hours count-item">
+                                                <div class="number"></div>
+                                                <span class>Hours</span>
+                                            </div>
+
+                                            <div class="countdown__minutes count-item">
+                                                <div class="number"></div>
+                                                <span class>Minutes</span>
+                                            </div>
+
+                                            <div class="countdown__seconds count-item">
+                                                <div class="number"></div>
+                                                <span class>Seconds</span>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="event-card p-1 bg-white">
+                                    <div class="card-body px-1">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5 class="card-title"><a href="event-details.html"> Information
+                                                        Tech Course </a></h5>
+                                                <div class=" d-flex  align-items-center ">
+                                                    <h6 class="event-date d-flex mb-3 text-primary align-items-center">
+                                                        <img src="assets/images/calendar-orange.svg" width="20px"
+                                                            class="icon rounded-0" alt="">
+                                                        <span class="mr-2">12
+                                                            Dec -
+                                                            2020</span> <span class="">20 : 45 PM</span>
+                                                    </h6>
+                                                    <h6 class="event-duration d-flex align-items-center mb-3  ml-3">
+                                                        <img src="assets/images/timer.svg"
+                                                            data-src="assets/images/timer.svg" class="lazyload icon"
+                                                            alt="">
+                                                        <span class="">01 : 20 min</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <div class="rate d-flex">
+                                                <div class="rate-percentage">4.5</div>
+                                                <ul class="rate-list d-flex mx-1">
+                                                    <li><i class="fas fa-star active"></i></li>
+                                                    <li><i class="fas fa-star active"></i></li>
+                                                    <li><i class="fas fa-star active"></i></li>
+                                                    <li><i class="fas fa-star active"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                </ul>
+                                                <span class="reviews-nums">(123)</span>
+                                            </div>
+                                        </div>
+                                        <details class="event-place-details">
+                                            <summary>
+                                                <div class=" media event-place mb-2 align-items-center">
+                                                    <img src="assets/images/new-horzion.png"
+                                                        data-src="assets/images/new-horzion.png" class="lazyload "
+                                                        alt="">
+                                                    <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                                </div>
+                                            </summary>
+                                            <div>
+                                                <ul class="social-links d-flex border-bottom py-3 ">
+
+                                                    <li>
+                                                        <a class="facebook" href="#" data-toggle="tooltip"
+                                                            data-placement="bottom" title=""
+                                                            data-original-title="facebook">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="twitter" href="#" data-toggle="tooltip"
+                                                            data-placement="bottom" title=""
+                                                            data-original-title="twitter">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="linkedin" href="#" data-toggle="tooltip"
+                                                            data-placement="bottom" title=""
+                                                            data-original-title="linkedin">
+                                                            <i class="fab fa-linkedin-in"></i>
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="pinterest" href="#" data-toggle="tooltip"
+                                                            data-placement="bottom" title=""
+                                                            data-original-title="pinterest">
+                                                            <i class="fab fa-pinterest-p"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                                                    recusandae, enim molestiae totam velit repudiandae reiciendis
+                                                    aperiam fuga quo eaque non placeat ducimus itaque inventore quas
+                                                    magni iure? Repellendus, blanditiis.</p>
+                                            </div>
+                                        </details>
+                                        <div class="card card-tags border-0 bg-light mt-2 mb-4">
+                                            <div class="card-body">
+                                                <ul class="d-flex tags-list flex-wrap mb-0">
+                                                    <li>
+                                                        <span class="mx-2">Category : </span>
+                                                        <b>Design</b>
+                                                    </li>
+                                                    <li>
+                                                        <span class="mx-2">Level: </span>
+                                                        <b>Medium</b>
+                                                    </li>
+                                                    <li>
+                                                        <span class="mx-2">Certificate: </span>
+                                                        <b>Yes</b>
+                                                    </li>
+                                                    <li>
+                                                        <span class="mx-2">Fee: </span>
+                                                        <b>Totally Free</b>
+                                                    </li>
+                                                    <li>
+                                                        <span class="mx-2">Type: </span>
+                                                        <b>Online</b>
+                                                    </li>
+                                                    <li>
+                                                        <span class="mx-2">Lang: </span>
+                                                        <b>English</b>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="d-flex justify-content-between align-items-start pb-4 border-bottom">
+                                            <div class="d-flex py-1">
+                                                <a href="#"
+                                                    class="btn btn-primary mw-auto mh-auto ml-0 mr-3 text-white">
+                                                    join Event
+                                                </a>
+                                                <a href="#" class="btn btn-outline-primary mw-auto mh-auto ml-0 mr-3">
+                                                    Add To Calendar
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-icon btn-outline-primary mw-auto mh-auto ml-0 mr-3">
+                                                    <i class="fas fa-video"></i>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex justify-content-end py-1">
+                                                <button type="button" class="btn btn-light-primary mx-1">
+                                                    <i class="far fa-bell mr-2"></i>
+                                                    <span>Get Notified</span>
+                                                </button>
+                                                <button type="button" class="btn btn-light-success mw-auto mx-1">
+                                                    <i class="far fa-bookmark"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-light-secondary mw-auto mx-1">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                        <div class="descp py-3">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since... <a
+                                                    href="#" class="text-primary"> Read More </a>
+                                            </p>
+                                        </div>
+
+                                        <div class="event-admin">
+                                            <details class="event-admin-details">
+                                                <summary>
+                                                    <div class=" media event-admin align-items-center">
+                                                        <img src="assets/images/person-icon.png"
+                                                            data-src="assets/images/person-icon.png"
+                                                            class="lazyload icon" alt="">
+                                                        <div class="media-body">
+                                                            <h5 class=" mx-2 font-weight-medium">Mohammed Ahmed</h5>
+                                                            <h6 class="admin-job mx-2">UX Instructor at IBM</h6>
+                                                        </div>
+                                                    </div>
+                                                </summary>
+                                                <div class="py-3">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+                                                        eum
+                                                        quaerat. Impedit hic ipsam voluptatum numquam, dolores iste cum
+                                                        reprehenderit reiciendis assumenda! Quae, nihil dolorum tempora
+                                                        voluptate vel deserunt voluptatum.
+                                                    </p>
+                                                </div>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" bg-light card border-0 rounded">
+                                <div class="card-body scrolled-card h-100">
+                                    <h5 class="sec-title bordered-title font-weight-medium "> Similar <span
+                                            class="text-primary">Events</span> </h5>
+                                    <div class="events-cards">
+                                        <div class="event-card bg-white my-2">
+                                            <h5 class="card-title">Information Tech Course</h5>
+                                            <div
+                                                class=" d-flex justify-content-between align-items-center border-bottom">
+                                                <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12
+                                                        Dec -
+                                                        2020</span> <span class="">20 : 45 PM</span></h6>
+                                                <h6 class="event-duration d-flex align-items-center mb-3 ">
+                                                    <img src="assets/images/timer.svg"
+                                                        data-src="assets/images/timer.svg" class="lazyload icon" alt="">
+                                                    <span class="">01 : 20 min</span>
+                                                </h6>
+                                            </div>
+                                            <div class="mt-3 media event-place align-items-center">
+                                                <img src="assets/images/new-horzion.png"
+                                                    data-src="assets/images/new-horzion.png" class="lazyload " alt="">
+                                                <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                            </div>
+                                            <div class="mt-2 d-flex align-items-center justify-content-between">
+
+                                                <div class=" media event-admin align-items-center">
+                                                    <img src="assets/images/person-icon.png"
+                                                        data-src="assets/images/person-icon.png" class="lazyload"
+                                                        alt="">
+                                                    <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="event-card bg-white my-2">
+                                            <h5 class="card-title">Information Tech Course</h5>
+                                            <div
+                                                class=" d-flex justify-content-between align-items-center border-bottom">
+                                                <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12
+                                                        Dec -
+                                                        2020</span> <span class="">20 : 45 PM</span></h6>
+                                                <h6 class="event-duration d-flex align-items-center mb-3 ">
+                                                    <img src="assets/images/timer.svg"
+                                                        data-src="assets/images/timer.svg" class="lazyload icon" alt="">
+                                                    <span class="">01 : 20 min</span>
+                                                </h6>
+                                            </div>
+                                            <div class="mt-3 media event-place align-items-center">
+                                                <img src="assets/images/new-horzion.png"
+                                                    data-src="assets/images/new-horzion.png" class="lazyload " alt="">
+                                                <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                            </div>
+                                            <div class="mt-2 d-flex align-items-center justify-content-between">
+
+                                                <div class=" media event-admin align-items-center">
+                                                    <img src="assets/images/person-icon.png"
+                                                        data-src="assets/images/person-icon.png" class="lazyload"
+                                                        alt="">
+                                                    <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="event-card bg-white my-2">
+                                            <h5 class="card-title">Information Tech Course</h5>
+                                            <div
+                                                class=" d-flex justify-content-between align-items-center border-bottom">
+                                                <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12
+                                                        Dec -
+                                                        2020</span> <span class="">20 : 45 PM</span></h6>
+                                                <h6 class="event-duration d-flex align-items-center mb-3 ">
+                                                    <img src="assets/images/timer.svg"
+                                                        data-src="assets/images/timer.svg" class="lazyload icon" alt="">
+                                                    <span class="">01 : 20 min</span>
+                                                </h6>
+                                            </div>
+                                            <div class="mt-3 media event-place align-items-center">
+                                                <img src="assets/images/new-horzion.png"
+                                                    data-src="assets/images/new-horzion.png" class="lazyload " alt="">
+                                                <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                            </div>
+                                            <div class="mt-2 d-flex align-items-center justify-content-between">
+
+                                                <div class=" media event-admin align-items-center">
+                                                    <img src="assets/images/person-icon.png"
+                                                        data-src="assets/images/person-icon.png" class="lazyload"
+                                                        alt="">
+                                                    <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sponsers-section text-center py-5">
+                <div class="container">
+                    <h5 class="text-primary">Our Sponsers</h5>
+                    <h3 class="sec-title text- text-center">Sponsers we love to deal with </h3>
+                    <div class="sponsers-slider owl-carousel">
+                        <div class="sponser-logo">
+                            <img src="assets/images/piktab.png" data-src="assets/images/piktab.png" class="lazyload"
+                                alt="sponser logo">
+                        </div>
+                        <div class="sponser-logo">
+                            <img src="assets/images/piktab.png" data-src="assets/images/piktab.png" class="lazyload"
+                                alt="sponser logo">
+                        </div>
+                        <div class="sponser-logo">
+                            <img src="assets/images/piktab.png" data-src="assets/images/piktab.png" class="lazyload"
+                                alt="sponser logo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class=" col-lg-6 col-md-6">
+                            <div class="footer-descp">
+                                <img src="assets/images/logo.png" data-src="assets/images/logo.png"
+                                    class="lazyload footer-logo" alt="">
+
+                                <div class="my-4 w-75 descp">
+                                    <p>To anyone who seeks to develop, learn and learn, we make it easy for you to reach
+                                        through us, just look for what you want.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <h5 class="footer-title"> links</h5>
+                            <ul class="footer-links ">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Events </a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact Us </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=" col-lg-3 col-sm-6">
+                            <div class="">
+
+                                <h5 class="footer-title ">Contact us</h5>
+                                <ul class="footer-links">
+
+                                    <li><a href="mailto:home@info.com">home@info.com</a></li>
+                                    <li><a href="tel:+0102548965875">0102548965875</a></li>
+                                    <li><a href="tel:+0102548965875">0102548965875</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrights-social">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copy-rights">
+                                <p> Copyright © 2021 All rights reserved. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="social-links d-flex justify-content-end align-self-end">
+
+                                <li>
+                                    <a class="facebook" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="linkedin" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="linkedin">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="pinterest" href="#" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="pinterest">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- login modal -->
+
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Login To iWebinar </h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="login-form">
+
+                            <form action="">
+                                <div class="form-group ">
+                                    <input type="email" id="InputEmail" class="form-control"
+                                        placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="inputPassword" class="form-control"
+                                        placeholder="Password">
+                                </div>
+                                <div class="text-center py-2">
+                                    <!-- <button type="submit" class="text-white btn btn-primary w-100">
+                                     Log In
+                                 </button> -->
+                                    <a href="after-login.html" type="submit" class="text-white btn btn-primary w-100">
+                                        Log In
+                                    </a>
+                                </div>
+                            </form>
+                            <a href="#" class="text-center w-100 text-black-50 mt-3">forget Your Password ?</a>
+                            <div class="text-black-50 text-center mt-2">
+                                Don't have an account yet? <a href="JavaScript:Void(0);" class="text-primary"
+                                    data-toggle="modal" data-target="#signUpModal">Create
+                                    Account</a>
+                            </div>
+                            <div class="text-center">
+                                <span class="my-3 OR">OR</span>
+                            </div>
+                            <div class="socail-logins d-flex justify-content-center py-2">
+                                <a href="#" class="btn d-flex align-items-center google">
+                                    <i class="fab fa-google "></i>
+                                    Login with Google
+                                </a>
+                                <a href="#" class="btn d-flex align-items-center facebook">
+                                    <i class="fab fa-facebook "></i>
+                                    Login with Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sign Up modal -->
+
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h3 class="modal-title">signUp To iWebinar </h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="signUp-form">
+
+                            <form action="">
+                                <div class="form-group ">
+                                    <input type="text" id="InputUserName" class="form-control" placeholder="User Name">
+                                </div>
+                                <div class="form-group ">
+                                    <input type="email" id="InputEmail" class="form-control"
+                                        placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="inputPassword" class="form-control"
+                                        placeholder="Password">
+                                </div>
+                                <div class="text-center py-2">
+                                    <button type="submit" class="text-white btn btn-primary w-100">
+                                        Create
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="text-center w-100 text-black-50 mt-3 w-90 mx-auto">
+                                By signing up, you agree to the Terms & Conditions and Privacy Policy. You'll also
+                                receive our newsletter, which you can unsubscribe to at any time.
+                            </div>
+                            <div class="text-center">
+                                <span class="my-3 OR">OR</span>
+                            </div>
+                            <div class="socail-logins d-flex justify-content-center py-2">
+                                <a href="#" class="btn d-flex align-items-center google">
+                                    <i class="fab fa-google "></i>
+                                    Login with Google
+                                </a>
+                                <a href="#" class="btn d-flex align-items-center facebook">
+                                    <i class="fab fa-facebook "></i>
+                                    Login with Facebook
+                                </a>
+                            </div>
+                            <div class="text-black-50 text-center mt-2">
+                                Already have an account? <a href="JavaScript:Void(0);" class="text-primary"
+                                    data-toggle="modal" data-target="#loginModal">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+        integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- partial -->
+    <script src='https://fullcalendar.io/releases/core/4.0.2/main.min.js'></script>
+    <script src='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.js'></script>
+    <script src='https://fullcalendar.io/releases/list/4.0.1/main.min.js'></script>
+    <script src='https://fullcalendar.io/releases/google-calendar/4.0.1/main.min.js'></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        (() => {
+            // Specify the deadline date
+            const deadlineDate = new Date('May 31, 2021 23:59:59')
+                .getTime(); // Cache all countdown boxes into consts
+
+            const countdownDays = document.querySelector('.countdown__days .number');
+            const countdownHours = document.querySelector('.countdown__hours .number');
+            const countdownMinutes = document.querySelector('.countdown__minutes .number');
+            const countdownSeconds = document.querySelector(
+                '.countdown__seconds .number'); // Update the count down every 1 second (1000 milliseconds)
+
+            setInterval(() => {
+                // Get current date and time
+                const currentDate = new Date()
+                    .getTime(); // Calculate the distance between current date and time and the deadline date and time
+
+                const distance = deadlineDate -
+                    currentDate; // Calculations the data for remaining days, hours, minutes and seconds
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+                const minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+                const seconds = Math.floor(distance % (1000 * 60) /
+                    1000); // Insert the result data into individual countdown boxes
+
+                countdownDays.innerHTML = days;
+                countdownHours.innerHTML = hours;
+                countdownMinutes.innerHTML = minutes;
+                countdownSeconds.innerHTML = seconds;
+            }, 1000);
+        })();
+    </script>
+
+</body>
+
+</html>
