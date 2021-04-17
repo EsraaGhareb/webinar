@@ -11015,6 +11015,54 @@ img {
   min-height: auto;
 }
 
+.menu-srch button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.menu-srch button::focus {
+  outline: none;
+}
+
+.menu-srch .search-btn img {
+  height: 22px;
+}
+
+.menu-srch .aside-btn img {
+  height: 15px;
+}
+
+.search-form {
+  background-color: #fff;
+  position: absolute;
+  width: 270px;
+  height: 80px;
+  padding: 13px 10px;
+  top: calc(100%);
+  right: 0;
+  display: none;
+  z-index: 110;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-form .btn-search {
+  color: #6c757d;
+  font-size: 17px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.search-form .form-control {
+  margin: 0;
+}
+
 .modal .modal-content {
   padding: 30px;
   border-radius: 30px;

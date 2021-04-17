@@ -127,15 +127,11 @@ if ($("body").css("direction") == "rtl") {
       }
     });
   });
-  // $('#signUpModal').on('hidden.bs.modal', function () {
-  //   // Load up a new modal...
-  //   $('#loginModal').modal('show')
-  // })
-  // $('#loginModal').on('hidden.bs.modal', function () {
-  //   // Load up a new modal...
-  //   $('#signUpModal').modal('show')
-  // });
-
+  //   search btn
+  $(".search-lnk").click(function () {
+    $(".search-form").slideToggle(); 
+  });
+ 
   // counter js 
   $('.counter').each(function () {
     let counter = $(this).find(".timer");
