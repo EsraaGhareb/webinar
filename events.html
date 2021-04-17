@@ -53,13 +53,13 @@
                                 <a class="nav-link " href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="events.html">Events</a>
+                                <a class="nav-link active" href="events.html">Events</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="about-us.html"> about us </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="contact-us.html">Contact Us</a>
+                                <a class="nav-link " aria-current="page" href="contact-us.html">Contact Us</a>
                             </li>
                             <li class="nav-item search-item">
                                 <a class="nav-link" href="JavaScript:Void(0);"> <i class="fas fa-search mx-2"></i>
@@ -103,83 +103,285 @@
         <header id="breadcrumb-header" aria-label="breadcrumb"
             class="text-center d-flex justify-content-center flex-column align-items-center">
             <div class="container">
-                <h1 class="font-weight-medium">Contact us</h1>
+                <h1 class="font-weight-medium">Events</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+                    <li class="breadcrumb-item active" aria-current="page">Events</li>
                 </ol>
             </div>
         </header>
         <section class="content">
             <section id="contact-us" class="contact-us py-5 my-4">
                 <div class="container">
-
-                    <div class="row ">
-
-                        <div class="col-md-4">
-                            <div class="contact-info-card " data-aos="fade-zoom-in">
-                                <img src="assets/images/phone.svg" data-src="assets/images/phone.svg" class=" lazyload">
-                                <h5> <a href="tel:+46-8 524856 25879">+46-8 524856 25879</a></h5>
-                                <p class="text-primary">Office Number</p>
+                    <form action="#">
+                        <div class="row justify-content-center primary-row">
+                            <div class="form-group col-md-3">
+                                <label for="FilterByCategory">Filter By Category</label>
+                                <select name="FilterByCategory" id="FilterByCategory" class="form-control my-2"
+                                    placeholder="Filter By Category">
+                                    <option value="">Category</option>
+                                    <option value="">Category</option>
+                                    <option value="">Category</option>
+                                    <option value="">Category</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="FilterByLocation">Filter By Location</label>
+                                <select name="FilterByLocation" id="FilterByLocation" class="form-control my-2"
+                                    placeholder="Filter By Location">
+                                    <option value="">Location</option>
+                                    <option value="">Location</option>
+                                    <option value="">Location</option>
+                                    <option value="">Location</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="FilterByWebinar">Filter By Webinar</label>
+                                <select name="FilterByWebinar" id="FilterByWebinar" class="form-control my-2"
+                                    placeholder="Filter By Webinar">
+                                    <option value="">Webinar</option>
+                                    <option value="">Webinar</option>
+                                    <option value="">Webinar</option>
+                                    <option value="">Webinar</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="contact-info-card " data-aos="fade-zoom-in">
-                                <img src="assets/images/email.svg" data-src="assets/images/email.svg" class=" lazyload">
-                                <h5> <a href="mailto:email@iwebinar.com">email@iwebinar.com</a></h5>
-
-                                <p class="text-primary">Official Email Address</p>
+                        <div class="form-row justify-content-center filter-row">
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                                <select name="Price" id="Price" class="form-control my-2" placeholder="Price">
+                                    <option selected hidden disabled>Price</option>
+                                    <option value="">1200</option>
+                                    <option value="">100</option>
+                                    <option value="">2000</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                                <select name="Length" id="Length" class="form-control my-2" placeholder="Length">
+                                    <option selected hidden disabled>length</option>
+                                    <option value="">2</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                                <select name="StartDate" id="StartDate" class="form-control my-2"
+                                    placeholder="Start Date">
+                                    <option selected hidden disabled>Start Date</option>
+                                    <option value="">15 April</option>
+                                    <option value="">15 April</option>
+                                    <option value="">15 April</option>
+                                    <option value="">15 April</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                                <select name="Certificate" id="Certificate" class="form-control my-2"
+                                    placeholder="Certificate">
+                                    <option selected hidden disabled>Certificate</option>
+                                    <option value="">Webinar</option>
+                                    <option value="">Webinar</option>
+                                    <option value="">Webinar</option>
+                                    <option value="">Webinar</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                                <select name="CourseLevel" id="CourseLevel" class="form-control my-2"
+                                    placeholder="Course Level">
+                                    <option selected hidden disabled>Course Level</option>
+                                    <option value="">level 1</option>
+                                    <option value="">level 2</option>
+                                    <option value="">level 3</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="contact-info-card " data-aos="fade-zoom-in">
-                                <img src="assets/images/marker.svg" data-src="assets/images/marker.svg"
-                                    class=" lazyload">
-                                <h5> <a href="#">Stockholm, next to Brazilian.</a></h5>
-                                <p class="text-primary">Office Location</p>
+                    </form>
+                    <div class="filter-result-head mt-4 pt-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="bordered-title "> Result : </h5>
+
+                            <div class="">
+                                <div class="d-flex align-items-center ">
+
+                                    <button class="btn btn-primary text-white mx-2 " type="button">Join Now</button>
+
+                                    <button class="btn btn-outline-primary mx-2 " type="button">Instructors</button>
+
+                                    <select name="sortBy" id="sortBy" class="form-control my-2 mx-2 mw-auto"
+                                        placeholder="Sort By">
+                                        <option selected disabled hidden>Sort</option>
+                                        <option value="">Latest</option>
+                                        <option value="">Oldest</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter-display-shape">
+                                <button class="btn btn-link mw-auto mh-auto px-0 mx-2 list-display"> <i
+                                        class="fas fa-bars fa-2x"></i></button>
+                                <button class="btn btn-link mw-auto mh-auto px-0 mx-2 column-display"> <i
+                                        class="fas fa-th-large fa-2x"></i> </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="filter-result-body">
+                        <div class="events-cards my-4">
+                            <div class="row">
+                                 
+                                <div class="col-lg-6">
+                                    <div class="event-card p-1 d-flex"> 
+                                            
+                                        <div class="card-header px-2 border-0 bg-transparent">
+                                            <img src="assets/images/mo1.jpg" data-src="assets/images/mo1.jpg"
+                                                class="event-img" alt="">
+                                        </div> 
+
+                                        <div class="card-body px-1">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <div>
+                                                        <h5 class="card-title"><a href="event-details"> Information Tech Course </a></h5>
+                                                        <div
+                                                            class=" d-flex justify-content-between align-items-center">
+                                                            <h6 class="event-date d-flex mb-3 text-primary">
+                                                                <span class="mr-2">12
+                                                                    Dec -
+                                                                    2020</span> <span class="">20 : 45 PM</span>
+                                                            </h6>
+                                                            <h6
+                                                                class="event-duration d-flex align-items-center mb-3  ml-3">
+                                                                <img src="assets/images/timer.svg"
+                                                                    data-src="assets/images/timer.svg"
+                                                                    class="lazyload icon" alt="">
+                                                                <span class="">01 : 20 min</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class=" media event-place mb-2 align-items-center">
+                                                        <img src="assets/images/new-horzion.png"
+                                                            data-src="assets/images/new-horzion.png"
+                                                            class="lazyload " alt="">
+                                                        <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                                    </div>
+                                                    <div class="my-1 media event-admin align-items-center">
+                                                        <img src="assets/images/person-icon.png"
+                                                            data-src="assets/images/person-icon.png"
+                                                            class="lazyload" alt="">
+                                                        <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="d-flex flex-column ">
+                                                        <button type="button"
+                                                            class="btn btn-light-primary btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bell"></i></button>
+                                                        <button type="button"
+                                                            class="btn btn-light-secondary btn-icon mw-auto m-1 py-1"><i
+                                                                class="fas fa-share-alt"></i> </button>
+                                                        <button type="button"
+                                                            class="btn btn-light-success btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bookmark"></i> </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-flex py-3">
+                                                <a href="#"
+                                                    class="btn btn-primary mw-auto mh-auto ml-0 mr-3 text-white">
+                                                    join Event
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-outline-primary mw-auto mh-auto ml-0 mr-3">
+                                                    Add To Calendar
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-icon btn-outline-primary mw-auto mh-auto ml-0 mr-3">
+                                                    <i class="fas fa-video"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                              
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="event-card p-1 d-flex"> 
+                                            
+                                        <div class="card-header px-2 border-0 bg-transparent">
+                                            <img src="assets/images/mo1.jpg" data-src="assets/images/mo1.jpg"
+                                                class="event-img" alt="">
+                                        </div> 
+
+                                        <div class="card-body px-1">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <div>
+                                                        <h5 class="card-title"><a href="event-details"> Information Tech Course </a></h5>
+                                                        <div
+                                                            class=" d-flex justify-content-between align-items-center">
+                                                            <h6 class="event-date d-flex mb-3 text-primary">
+                                                                <span class="mr-2">12
+                                                                    Dec -
+                                                                    2020</span> <span class="">20 : 45 PM</span>
+                                                            </h6>
+                                                            <h6
+                                                                class="event-duration d-flex align-items-center mb-3  ml-3">
+                                                                <img src="assets/images/timer.svg"
+                                                                    data-src="assets/images/timer.svg"
+                                                                    class="lazyload icon" alt="">
+                                                                <span class="">01 : 20 min</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class=" media event-place mb-2 align-items-center">
+                                                        <img src="assets/images/new-horzion.png"
+                                                            data-src="assets/images/new-horzion.png"
+                                                            class="lazyload " alt="">
+                                                        <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                                    </div>
+                                                    <div class="my-1 media event-admin align-items-center">
+                                                        <img src="assets/images/person-icon.png"
+                                                            data-src="assets/images/person-icon.png"
+                                                            class="lazyload" alt="">
+                                                        <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="d-flex flex-column ">
+                                                        <button type="button"
+                                                            class="btn btn-light-primary btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bell"></i></button>
+                                                        <button type="button"
+                                                            class="btn btn-light-secondary btn-icon mw-auto m-1 py-1"><i
+                                                                class="fas fa-share-alt"></i> </button>
+                                                        <button type="button"
+                                                            class="btn btn-light-success btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bookmark"></i> </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-flex py-3">
+                                                <a href="#"
+                                                    class="btn btn-primary mw-auto mh-auto ml-0 mr-3 text-white">
+                                                    join Event
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-outline-primary mw-auto mh-auto ml-0 mr-3">
+                                                    Add To Calendar
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-icon btn-outline-primary mw-auto mh-auto ml-0 mr-3">
+                                                    <i class="fas fa-video"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                              
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="contact-us-form py-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="sec-decp">
-                                <h2 class="sec-title font-weight-medium">
-                                    <span class="text-primary"> Feel Free, </span> Keep in touch with us, send message
-                                </h2>
-                                <h6 class="text-descp">Enter your name and email address , say what you want, Feel free.
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="subscribe-form">
-                                <form action="#">
-                                    <div class="form-group  ">
-                                        <input type="text" class="form-control" placeholder="Full name">
-                                    </div>
-                                    <div class="form-group  ">
-                                        <input type="email" class="form-control" placeholder="Email address">
-                                    </div>
-                                    <div class="form-group ">
-                                        <textarea name="your-message" class="form-control" id="yourMessage"
-                                            placeholder="Write your message ..." rows="5"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary text-white">Send</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="iwebinar-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420361.83592802024!2d5.5777134393211245!3d52.10117068159879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7ba91ce9b2273%3A0x161c5ae0f973cad7!2sArnhem%2C%20Netherlands!5e0!3m2!1sen!2seg!4v1618083977438!5m2!1sen!2seg"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </section>
-
 
             <section class="sponsers-section text-center py-5">
                 <div class="container">
