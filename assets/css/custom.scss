@@ -190,7 +190,7 @@ img {
 }
 
 .menu-srch {
-  
+
 
 
     button {
@@ -219,6 +219,7 @@ img {
     background-color: #fff;
     position: absolute;
     width: 270px;
+    max-width: 100%;
     height: 80px;
     padding: 13px 10px;
     top: calc(100%);
@@ -226,6 +227,7 @@ img {
     display: none;
     z-index: 110;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+
     .btn-search {
         color: $gray-600;
         font-size: 17px;
@@ -234,7 +236,8 @@ img {
         top: 0;
         height: 100%;
     }
-    .form-control{
+
+    .form-control {
         margin: 0;
     }
 }
@@ -616,7 +619,6 @@ img {
         padding-right: 40px;
         background: #FC6D00 no-repeat right 10px center / 15px url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABmJLR0QA/wD/AP+gvaeTAAAAdUlEQVQ4je3NPQqDUBBF4UPqJLj0oE3U9cQuXcDGPsRNHBuFh8Sf92y9MM1c5hs4sxn1pd4P3GdqcwHeQKdmCcgNaIHPtMjVPgZTr+pXrebFbmwRicECpNz6tojtRtawaOQflowEWK3+xnkmIQFWqI9DyBkABpmLq0fZgMB3AAAAAElFTkSuQmCC');
         appearance: none;
-
         option {
             background-color: $white;
             color: #000;
@@ -1013,6 +1015,10 @@ summary {
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+    }
+
+    .fc-scroller {
+        min-height: 400px;
     }
 }
 
@@ -1487,7 +1493,7 @@ select.form-control {
     background: no-repeat right 10px center / 15px url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAOVBMVEUAAAD/gAD/dgD/bQD/YAD9bAD8bgD8bQD8bQD9bAD8bQD8bgD7bQD7bAD8bAD8bQD8bQD8bAD///9gTiOVAAAAEnRSTlMADA0OEJCSk5iZmpvFxufn6eq+T+OpAAAAAWJLR0QSe7xsAAAAAEdJREFUGNNjYKAi4GFG5bPwMrAJsiCLMPFzMaCKMYJEUMQY+bggDLgYIx8nTBIqhiQCFUMRAYuhiTAwcAsIcKA7mZ2VgQYAADtDAcvjns0qAAAAAElFTkSuQmCC');
     appearance: none;
 
-
+    min-width: 120px !important;
 }
 
 .primary-row {
@@ -1511,6 +1517,8 @@ select.form-control {
     }
 
     select.form-control {
+        // width: auto;
+        min-width: 120px !important;
         background: #F7F7F7 no-repeat right 10px center / 15px url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAOVBMVEUAAACAgICJiYmSkpKAgJ+BgY+AgZGAgJKBgZKAgo+AgZCAgJGAgJGAgZB/gZGAgZF/gZCAgpH////ayDNCAAAAEnRSTlMADA0OEJCSk5iZmpvFxufn6eq+T+OpAAAAAWJLR0QSe7xsAAAAAEdJREFUGNNjYKAi4GFG5bPwMrAJsiCLMPFzMaCKMYJEUMQY+bggDLgYIx8nTBIqhiQCFUMRAYuhiTAwcAsIcKA7mZ2VgQYAADtDAcvjns0qAAAAAElFTkSuQmCC');
     }
 }
@@ -1847,11 +1855,72 @@ header,
     }
 
     .navbar .auth-lnks a {
-
         padding: 0.5rem 0.2rem;
     }
 
+    // Header 
+    #header {
+        padding: 30px 25px;
+    }
 
+    .find-event-courses-form {
+        margin-bottom: 20px;
+    }
+
+    .site-img {
+        margin-top: 0;
+        margin-bottom: -20px;
+    }
+
+    #calendar {
+        width: 100%;
+    }
+
+    .event-card {
+        flex-wrap: wrap;
+
+        .card-header {}
+
+        .card-body {
+            flex: 0 0 100%;
+        }
+    }
+
+    .subscribe-sec {
+        margin: 40px 0;
+
+        .sec-decp {
+            padding: 5%;
+        }
+    }
+
+     .course-item {
+        .course-title {
+            font-size: 24px  !important;
+        }
+    }
+// 
+.filter-display-shape{
+display: none;
+}
+    // footer
+    .footer-title {
+        margin-top: 35px !important;
+    }
+
+    .footer-links {
+        margin-top: 25px !important;
+    }
+
+    .copyrights-social {
+        text-align: center;
+
+        .social-links {
+            justify-content: center;
+            margin-left: initial !important;
+            border-left: 0 !important;
+        }
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1866,10 +1935,21 @@ header,
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) {}
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+    .col-lg-6{
+       .event-card .card-body {
+        flex: 0 0 100%;
+    } 
+    }
+}
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
+    .btn {
+        min-width: 110px;
+    }
+
     .course-card {
 
         &:not(:first-child) {
@@ -1882,6 +1962,18 @@ header,
         }
 
 
+    }
+
+    .sec-title.font-lg {
+        font-size: 32px;
+    }
+
+    .course-card:hover {
+
+        .course-item {
+            margin: auto;
+
+        }
     }
 }
 
@@ -1897,6 +1989,9 @@ header,
         }
     }
 
+    .sec-title {
+        font-size: 21px;
+    }
 }
 
 @media (max-width: 375px) {
