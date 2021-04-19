@@ -26,9 +26,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-list.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-timegrid.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" />
+    <!-- for Arabic style  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style-ar.css" />
 </head>
+<!-- for Arabic style  -->
+<!-- Add dir="rtl" class="rtl" -->
 
-<body>
+<body dir="rtl" class="rtl">
     <div class="loading">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -65,17 +69,18 @@
                                 <a class="nav-link" href="contact-us.html">Contact Us</a>
                             </li>
                             <li class="nav-item search-item">
-                                 <div class="menu-srch">
-                                <a class="nav-link search-lnk" href="JavaScript:Void(0);"> <i
-                                        class="fas fa-search mx-2"></i>
-                                    search
-                                </a>
-                                <div class="search-form">
-                                    <input class="form-control" type="text" placeholder="Search Here"
-                                        aria-label="Search">
-                                    <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
+
+                                <div class="menu-srch">
+                                    <a class="nav-link search-lnk" href="JavaScript:Void(0);"> <i
+                                            class="fas fa-search mx-2"></i>
+                                        search
+                                    </a>
+                                    <div class="search-form">
+                                        <input class="form-control" type="text" placeholder="Search Here"
+                                            aria-label="Search">
+                                        <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
                                 </div>
-                            </div>
                             </li>
                         </ul>
                     </div>
@@ -90,16 +95,15 @@
                             </a>
 
                         </div>
-                        <!-- <button type="button" class="btn btn-primary text-white" data-toggle="modal"
-                            data-target="#loginModal">join now</button> -->
+                        <button type="button" class="btn btn-primary text-white" data-toggle="modal"
+                            data-target="#loginModal">join now</button>
                         <!-- after login -->
-                        <a href="profile.html" class="media align-items-center profile-lnk">
-                            <img src="assets/images/person-icon.png" data-src="assets/images/person-icon.png"
-                                class="profile-icon lazyload" alt="">
+                        <!-- <a href="profile.html" class="media align-items-center profile-lnk">
+                            <img src="assets/images/person-icon.png" data-src="assets/images/person-icon.png" class="profile-icon lazyload" alt="">
                             <div class="media-body">
                                 Israa Adel
                             </div>
-                        </a>
+                        </a> -->
                     </div>
                 </nav>
             </div>
@@ -108,7 +112,7 @@
         <div class="container">
             <header id="header">
                 <div class="row no-gutters">
-                    <div class="col-lg-6 col-md-7 align-self-center">
+                    <div class="col-lg-6 align-self-center">
                         <div class="site-descp">
                             <h5 class="sub-title">Keep Learning</h5>
                             <h1 class="site-title my-3"> Global knowledge and build your skills </h1>
@@ -139,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-5">
+                    <div class="col-lg-6">
                         <div class="site-img">
                             <img src="assets/images/homevector.png" data-src="assets/images/homevector.png"
                                 class="lazyload" alt="">
@@ -158,11 +162,11 @@
                         <a href="events.html" class="btn btn-more btn-outline-primary">More Events</a>
                     </div>
 
-                    <div class="row py-4 my-2" id="events-cards">
-                        <div class="col-lg-4 col-md-6">
+                    <div class="row py-4 my-2 justify-content-center" id="events-cards">
+                        <div class="col-xl-4 col-lg-6">
                             <div class="event-card watchnow-card">
                                 <h5 class="card-title">Information Tech Course</h5>
-                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                <div class=" d-flex justify-content-between align-items-center border-bottom flex-wrap">
                                     <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
                                             2020</span> <span class="">20 : 45 PM</span></h6>
                                     <h6 class="event-duration d-flex align-items-center mb-3 ">
@@ -176,21 +180,21 @@
                                         class="lazyload " alt="">
                                     <h6 class="mb-0 mx-2"> New Horizons </h6>
                                 </div>
-                                <div class="mt-2 d-flex align-items-center justify-content-between">
+                                <div class="mt-2 d-flex align-items-center justify-content-between flex-wrap">
 
                                     <div class=" media event-admin align-items-center">
                                         <img src="assets/images/person-icon.png"
                                             data-src="assets/images/person-icon.png" class="lazyload" alt="">
                                         <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
                                     </div>
-                                    <a href="#" class="btn btn-primary mw-auto mh-auto text-white">Watch now</a>
+                                    <a href="#" class="btn btn-primary mw-auto mh-auto text-white my-2">Watch now</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-xl-4 col-lg-6">
                             <div class="event-card soon-card">
                                 <h5 class="card-title">Information Tech Course</h5>
-                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                <div class=" d-flex justify-content-between align-items-center border-bottom flex-wrap">
                                     <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
                                             2020</span> <span class="">20 : 45 PM</span></h6>
                                     <h6 class="event-duration d-flex align-items-center mb-3 ">
@@ -204,14 +208,14 @@
                                         class="lazyload " alt="">
                                     <h6 class="mb-0 mx-2"> New Horizons </h6>
                                 </div>
-                                <div class="mt-2 d-flex align-items-center justify-content-between">
+                                <div class="mt-2 d-flex align-items-center justify-content-between flex-wrap">
 
                                     <div class=" media event-admin align-items-center">
                                         <img src="assets/images/person-icon.png"
                                             data-src="assets/images/person-icon.png" class="lazyload" alt="">
                                         <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
                                     </div>
-                                    <button class="btn btn-light-success mw-auto mh-auto " type="button" disabled>
+                                    <button class="btn btn-light-success mw-auto mh-auto my-2" type="button" disabled>
                                         <img src="assets/images/clock.svg" data-src="assets/images/clock.svg"
                                             class="lazyload icon" alt="">
                                         <span class="">soon</span>
@@ -219,10 +223,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-xl-4 col-lg-6">
                             <div class="event-card soon-card">
                                 <h5 class="card-title">Information Tech Course</h5>
-                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                <div class=" d-flex justify-content-between align-items-center border-bottom flex-wrap">
                                     <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
                                             2020</span> <span class="">20 : 45 PM</span></h6>
                                     <h6 class="event-duration d-flex align-items-center mb-3 ">
@@ -236,14 +240,14 @@
                                         class="lazyload " alt="">
                                     <h6 class="mb-0 mx-2"> New Horizons </h6>
                                 </div>
-                                <div class="mt-2 d-flex align-items-center justify-content-between">
+                                <div class="mt-2 d-flex align-items-center justify-content-between flex-wrap">
 
                                     <div class=" media event-admin align-items-center">
                                         <img src="assets/images/person-icon.png"
                                             data-src="assets/images/person-icon.png" class="lazyload" alt="">
                                         <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
                                     </div>
-                                    <button class="btn btn-light-success mw-auto mh-auto " type="button" disabled>
+                                    <button class="btn btn-light-success mw-auto mh-auto my-2" type="button" disabled>
                                         <img src="assets/images/clock.svg" data-src="assets/images/clock.svg"
                                             class="lazyload icon" alt="">
                                         <span class="">soon</span>
@@ -287,9 +291,9 @@
                     <h3 class="font-weight-bold sec-title font-lg text-center"> Courses <span class="text-primary">
                             Categories <span> </h3>
                     <p class="sec-slug text-center font-weight-medium">Choose categories you are interested in</p>
-                    <div class="py-4 my-3">
+                    <div class="py-md-4 my-3">
                         <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Sales-and-marketing.png"
                                         data-src="assets/images/Sales-and-marketing.png" class="lazyload course-icon">
@@ -297,7 +301,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Employment&technicians.png"
                                         data-src="assets/images/Employment&technicians.png"
@@ -306,7 +310,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Administrative-work.png"
                                         data-src="assets/images/Sales-and-marketing.png" class="lazyload course-icon">
@@ -314,7 +318,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/information-technology.png"
                                         data-src="assets/images/information-technology.png"
@@ -323,7 +327,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Chef.png" data-src="assets/images/Chef.png"
                                         class="lazyload course-icon">
@@ -331,7 +335,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Education&teaching.png"
                                         data-src="assets/images/Education&teaching.png" class="lazyload course-icon">
@@ -339,7 +343,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Medical-services.png"
                                         data-src="assets/images/Medical-services.png" class="lazyload course-icon">
@@ -347,7 +351,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Engineering.png" data-src="assets/images/Engineering.png"
                                         class="lazyload course-icon">
@@ -360,24 +364,28 @@
                     </div>
                 </div>
             </section>
-            <section class="counter-sec py-5 text-center">
+            <section class="counter-sec py-md-5 py-2 text-center">
                 <div class="container">
-                    <div class="row no-gutter w-75 m-auto">
-                        <div class=" col-lg-3 col-md-6 counter ">
-                            <span class="timer" data-to="520" data-speed="10000"> 520</span>
-                            <label class="d-block">Daily Visits</label>
-                        </div>
-                        <div class=" col-lg-3 col-md-6 counter">
-                            <span class="timer" data-to="7130" data-speed="10000"> 7130</span>
-                            <label class="d-block">Users</label>
-                        </div>
-                        <div class=" col-lg-3 col-md-6 counter">
-                            <span class="timer" data-to="487" data-speed="10000"> 487</span>
-                            <label class="d-block">Sharing</label>
-                        </div>
-                        <div class=" col-lg-3 col-md-6 counter">
-                            <span class="timer" data-to="8796" data-speed="10000"> 8796</span>
-                            <label class="d-block">Interaction</label>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="row no-gutter m-auto">
+                                <div class=" col-lg-3 col-sm-6 counter ">
+                                    <span class="timer" data-to="520" data-speed="10000"> 520</span>
+                                    <label class="d-block">Daily Visits</label>
+                                </div>
+                                <div class=" col-lg-3 col-sm-6 counter">
+                                    <span class="timer" data-to="7130" data-speed="10000"> 7130</span>
+                                    <label class="d-block">Users</label>
+                                </div>
+                                <div class=" col-lg-3 col-sm-6 counter">
+                                    <span class="timer" data-to="487" data-speed="10000"> 487</span>
+                                    <label class="d-block">Sharing</label>
+                                </div>
+                                <div class=" col-lg-3 col-sm-6 counter">
+                                    <span class="timer" data-to="8796" data-speed="10000"> 8796</span>
+                                    <label class="d-block">Interaction</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -516,7 +524,7 @@
         </footer>
         <!-- login modal -->
 
-        <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+        <div class="modal " id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
             aria-hidden="true">
             <div class="modal-dialog modal-md modal-dialog-centered" role="document">
                 <div class="modal-content ">
@@ -537,8 +545,8 @@
                                 </div>
                                 <div class="text-center py-2">
                                     <!-- <button type="submit" class="text-white btn btn-primary w-100">
-                                   Log In
-                               </button> -->
+                                        Log In
+                                    </button> -->
                                     <a href="after-login.html" type="submit" class="text-white btn btn-primary w-100">
                                         Log In
                                     </a>
@@ -570,7 +578,7 @@
         </div>
         <!-- sign Up modal -->
 
-        <div class="modal" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
+        <div class="modal " id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
             aria-hidden="true">
             <div class="modal-dialog modal-md modal-dialog-centered" role="document">
                 <div class="modal-content ">

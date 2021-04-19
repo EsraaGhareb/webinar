@@ -25,10 +25,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-daygrid.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-list.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-timegrid.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" /> 
+    <!-- for Arabic style  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style-ar.css" />
+
 </head>
 
-<body>
+<!-- for Arabic style  -->
+<!-- Add dir="rtl" class="rtl" -->
+
+<body dir="rtl" class="rtl">
     <div class="loading">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -91,15 +97,16 @@
                             </a>
 
                         </div>
-                        <button type="button" class="btn btn-primary text-white" data-toggle="modal"
-                            data-target="#loginModal">join now</button>
+                        <!-- <button type="button" class="btn btn-primary text-white" data-toggle="modal"
+                            data-target="#loginModal">join now</button> -->
                         <!-- after login -->
-                        <!-- <a href="profile.html" class="media align-items-center profile-lnk">
-                            <img src="assets/images/person-icon.png" data-src="assets/images/person-icon.png" class="profile-icon lazyload" alt="">
+                        <a href="profile.html" class="media align-items-center profile-lnk">
+                            <img src="assets/images/person-icon.png" data-src="assets/images/person-icon.png"
+                                class="profile-icon lazyload" alt="">
                             <div class="media-body">
                                 Israa Adel
                             </div>
-                        </a> -->
+                        </a>
                     </div>
                 </nav>
             </div>
@@ -158,11 +165,11 @@
                         <a href="events.html" class="btn btn-more btn-outline-primary">More Events</a>
                     </div>
 
-                    <div class="row py-4 my-2" id="events-cards">
-                        <div class="col-lg-4 ">
+                    <div class="row py-4 my-2 justify-content-center" id="events-cards">
+                        <div class="col-xl-4 col-lg-6">
                             <div class="event-card watchnow-card">
                                 <h5 class="card-title">Information Tech Course</h5>
-                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                <div class=" d-flex justify-content-between align-items-center border-bottom flex-wrap">
                                     <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
                                             2020</span> <span class="">20 : 45 PM</span></h6>
                                     <h6 class="event-duration d-flex align-items-center mb-3 ">
@@ -187,10 +194,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 ">
+                        <div class="col-xl-4 col-lg-6">
                             <div class="event-card soon-card">
                                 <h5 class="card-title">Information Tech Course</h5>
-                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                <div class=" d-flex justify-content-between align-items-center border-bottom flex-wrap">
                                     <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
                                             2020</span> <span class="">20 : 45 PM</span></h6>
                                     <h6 class="event-duration d-flex align-items-center mb-3 ">
@@ -219,10 +226,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 ">
+                        <div class="col-xl-4 col-lg-6">
                             <div class="event-card soon-card">
                                 <h5 class="card-title">Information Tech Course</h5>
-                                <div class=" d-flex justify-content-between align-items-center border-bottom">
+                                <div class=" d-flex justify-content-between align-items-center border-bottom flex-wrap">
                                     <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
                                             2020</span> <span class="">20 : 45 PM</span></h6>
                                     <h6 class="event-duration d-flex align-items-center mb-3 ">
@@ -289,7 +296,7 @@
                     <p class="sec-slug text-center font-weight-medium">Choose categories you are interested in</p>
                     <div class="py-md-4 my-3">
                         <div class="row no-gutters">
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Sales-and-marketing.png"
                                         data-src="assets/images/Sales-and-marketing.png" class="lazyload course-icon">
@@ -297,7 +304,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Employment&technicians.png"
                                         data-src="assets/images/Employment&technicians.png"
@@ -306,7 +313,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Administrative-work.png"
                                         data-src="assets/images/Sales-and-marketing.png" class="lazyload course-icon">
@@ -314,7 +321,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/information-technology.png"
                                         data-src="assets/images/information-technology.png"
@@ -323,7 +330,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Chef.png" data-src="assets/images/Chef.png"
                                         class="lazyload course-icon">
@@ -331,7 +338,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Education&teaching.png"
                                         data-src="assets/images/Education&teaching.png" class="lazyload course-icon">
@@ -339,7 +346,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Medical-services.png"
                                         data-src="assets/images/Medical-services.png" class="lazyload course-icon">
@@ -347,7 +354,7 @@
                                     <h6 class="courses-number">50 course</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 course-card">
+                            <div class="col-xl-3 col-lg-4 col-md-6 course-card">
                                 <div class="course-item">
                                     <img src="assets/images/Engineering.png" data-src="assets/images/Engineering.png"
                                         class="lazyload course-icon">

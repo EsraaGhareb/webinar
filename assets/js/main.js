@@ -54,7 +54,6 @@ if ($("body").css("direction") == "rtl") {
     dots: true,
     nav: false,
     rtl: rtl,
-
     slideBy: 1,
     items: 4,
 
@@ -69,7 +68,7 @@ if ($("body").css("direction") == "rtl") {
         nav: false,
       },
       768: {
-        items: 3,
+        items: 2,
         nav: false,
       },
       992: {
@@ -82,6 +81,7 @@ if ($("body").css("direction") == "rtl") {
     items: 5,
     autoplay: !0,
     slideBy: 1,
+    rtl: rtl,
     center: !0,
     autoplayHoverPause: !0,
     mouseDrag: !0,
