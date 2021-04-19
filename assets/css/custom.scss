@@ -2088,12 +2088,6 @@ header,
 .rtl {
     direction: rtl;
     text-align: right;
-
-}
-
-.body_wrapper {
-    direction: rtl;
-    text-align: right;
 }
 
 .rtl {
@@ -2106,6 +2100,7 @@ header,
     .body_wrapper {
          
         direction: rtl;
+        text-align: right;
     }
  
    
