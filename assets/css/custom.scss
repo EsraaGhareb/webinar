@@ -314,7 +314,6 @@ img {
     display: block;
     z-index: 1;
     position: relative;
-    background-color: $white;
     color: $gray-500;
 
     &::after {
@@ -331,8 +330,8 @@ img {
         content: "";
         position: relative;
         z-index: -1;
-        width: 40px;
-        height: 25px;
+        width: 40%;
+        height: 30px;
         display: block;
         margin: auto;
         margin-bottom: -30px;
@@ -345,6 +344,7 @@ img {
         border: 1px solid $gray-200;
         margin: 5px;
         color: $white;
+        min-width: 120px;
 
         i,
         svg {
@@ -517,7 +517,7 @@ img {
         .breadcrumb-item+.breadcrumb-item::before {
             content: ">>";
             color: $white;
-        } 
+        }
     }
 }
 
@@ -552,6 +552,28 @@ img {
 
 }
 
+.datepicker {
+    background: #F7F7F7 url('../images/date.png') no-repeat right 10px center / 20px !important;
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator{
+        opacity: 0;
+    }
+}
+
+.timepicker {
+    background: #F7F7F7 url('../images/time.png') no-repeat right 10px center / 20px !important;
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator{
+        opacity: 0;
+    }
+}
+.search {
+     
+    background-image: url('../images/search-orange.svg')  !important;
+    background-repeat: no-repeat !important;
+    background-position: right 10px center !important ;
+    background-size: 20px  !important;
+}
 .find-event-form {
     margin: 45px 0;
 
@@ -573,14 +595,15 @@ img {
             color: #808191;
         }
     }
-
     .datepicker {
-        background: #F7F7F7 url('../images/date.png') no-repeat left 10px center / 20px;
+        background: #F7F7F7 url('../images/date.png') no-repeat left 10px center / 20px !important;
+
     }
 
     .timepicker {
-        background: #F7F7F7 url('../images/time.png') no-repeat left 10px center / 20px;
+        background: #F7F7F7 url('../images/time.png') no-repeat left 10px center / 20px !important;
     }
+  
 }
 
 .find-event-courses-form {
@@ -722,6 +745,9 @@ img {
 
     &.soon-card {
         background-color: #FBFBFE;
+    }
+    &.finished-card {
+        background-color: #fdedef;
     }
 
     .card-title {
@@ -954,7 +980,7 @@ summary {
 }
 
 #calendar {
-    width: 85%;
+    // width: 85%;
     margin: 40px auto;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -1005,15 +1031,26 @@ summary {
 
     .fc-button {
         border: 2px solid $gray-400;
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        min-width: fit-content;
+        height: 45px;
+        margin: 5px;
         color: $gray-400;
         background-color: transparent;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+    }
+
+    .fc-button-active {
+        border-color: theme-color(primary);
+        color: theme-color(primary);
+    }
+
+    .fc-button:focus {
+        box-shadow: none;
     }
 
     .fc-scroller {
@@ -1459,6 +1496,26 @@ $value in $theme-colors {
             }
         }
     }
+
+    .share-btns {
+        .btn-#{$color}:focus,
+        .bg-#{$color}:focus,
+        .btn-light-#{$color}:focus,
+        .bg-light-#{$color}:focus {
+            color:theme-color-level($color, 0);
+            background-color:  theme-color-level($color, -10) !important;
+ 
+        }
+        .active.btn-#{$color},
+        .active.bg-#{$color},
+        .active.btn-light-#{$color},
+        .active.bg-light-#{$color} {
+            color:  theme-color-level($color, -10);
+            background-color: theme-color-level($color, 0) !important;
+ 
+        }
+       
+    }
 }
 
 // forms 
@@ -1479,6 +1536,32 @@ $value in $theme-colors {
     ::placeholder {
         color: #808191;
     }
+}
+
+.password-wrapper {
+    position: relative;
+    // border-radius: ;
+
+    // -webkit-border-radius:;
+    // -moz-border-radius:;
+    // -ms-border-radius:;
+    // -o-border-radius:;
+    // .form-control,    
+    // input[type='password']{
+    //     background-color: transparent;
+    //     border:0;
+    // }
+    .togglePass {
+        position: absolute;
+        border: none;
+        top: 0;
+        background: transparent;
+        height: 100%;
+        right: 10px;
+        color: #495057;
+        padding: 5px;
+    }
+
 }
 
 textarea.form-control {
@@ -2024,6 +2107,7 @@ header,
         position: absolute;
         top: 10px;
         right: 10px;
+
     }
 
     .filter-result-head {
@@ -2092,44 +2176,44 @@ header,
 
 .rtl {
 
-    /* Generals */ 
-        text-align: right;
-        direction: rtl; 
-    
+    /* Generals */
+    text-align: right;
+    direction: rtl;
+
 
     .body_wrapper {
-         
+
         direction: rtl;
         text-align: right;
     }
- 
-   
+
+
 
     // navbar
     .navbar {
-      
+
 
         .logo {
             margin: 5px 5px 5px 1rem;
-             
+
         }
 
         .nav-link {
-         
+
             &.active::after {
-                right: 0.9rem; 
-                left: auto; 
+                right: 0.9rem;
+                left: auto;
             }
         }
 
         .auth-lnks {
-            a { 
+            a {
 
                 &:last-child:before {
-                    
+
                     right: -5px;
                     left: auto;
-                    
+
                 }
             }
         }
@@ -2137,125 +2221,130 @@ header,
         .search-item {
             position: relative;
 
-            &::before { 
-                right: 0; 
-                left: auto; 
+            &::before {
+                right: 0;
+                left: auto;
             }
         }
 
-         
+
     }
- 
+
     .search-form {
-         
+
         left: 0;
-        right: auto;  
+        right: auto;
 
         .btn-search {
-             
-            left: 0; 
-            right: auto; 
-        } 
+
+            left: 0;
+            right: auto;
+        }
     }
 
-     
+
 
     .OR {
-      
-
         &::after {
-             
-            right: 0; 
-            left: auto; 
+            right: 0;
+            left: auto;
         }
-
-         
     }
- 
+    .search { 
+        background-position: left 10px center !important ;
+      
+    }
 
     /* menu togglar button */
 
     .navbar-toggler {
-       
+
         &::after,
         &::before {
-            
+
             left: 7%;
             right: auto;
         }
- 
+
 
         &[aria-expanded=true] {
-          
-          
+
+
 
             &::after {
-                
+
                 right: auto;
-                left: 16%;  
+                left: 16%;
             }
 
-            
+
         }
 
     }
 
     .profile-lnk {
         img {
-            margin-left: 10px; 
-            margin-right: initial; 
+            margin-left: 10px;
+            margin-right: initial;
         }
     }
 
     /* Header */
- 
+
     #breadcrumb-header {
         background: url(../images/breadcrumb.svg) bottom right/100% auto #fd8225 no-repeat;
-         
 
-        .breadcrumb { 
+
+        .breadcrumb {
             .breadcrumb-item+.breadcrumb-item::before {
-                 float: right;
-                 padding-right: 0.5rem;
+                float: right;
+                padding-right: 0.5rem;
             }
         }
     }
 
     .site-descp {
-        .sub-title { 
-            padding-right: 15px; 
-            padding-left: initial; 
+        .sub-title {
+            padding-right: 15px;
+            padding-left: initial;
 
             &::before {
-             
+
                 right: 0;
                 left: auto;
-                
-            } 
-        } 
 
-    }
-
-    .find-event-form { 
-
-        .form-control {
-             
-            padding-right: 40px; 
-            padding-left: initial; 
- 
+            }
         }
 
+    }
+    .datepicker {
+        background: #F7F7F7 url('../images/date.png') no-repeat left 10px center / 20px !important;
+       
+    }
+
+    .timepicker {
+        background: #F7F7F7 url('../images/time.png') no-repeat left 10px center / 20px !important;
+    }
+    .find-event-form {
+
+        .form-control {
+
+            padding-right: 40px;
+            padding-left: initial;
+
+        }
         .datepicker {
-            background: #F7F7F7 url('../images/date.png') no-repeat right 10px center / 20px;
+            background: #F7F7F7 url('../images/date.png') no-repeat right 10px center / 20px !important;
         }
 
         .timepicker {
-            background: #F7F7F7 url('../images/time.png') no-repeat right 10px center / 20px;
+            background: #F7F7F7 url('../images/time.png') no-repeat right 10px center / 20px !important;
         }
+
     }
 
     .find-event-courses-form {
-       
+
 
         .search {
             padding-left: initial;
@@ -2264,63 +2353,63 @@ header,
         }
 
         select.form-control {
-           
+
             padding-left: 40px;
             padding-right: 0.75rem;
             background: #FC6D00 no-repeat left 10px center / 15px url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABmJLR0QA/wD/AP+gvaeTAAAAdUlEQVQ4je3NPQqDUBBF4UPqJLj0oE3U9cQuXcDGPsRNHBuFh8Sf92y9MM1c5hs4sxn1pd4P3GdqcwHeQKdmCcgNaIHPtMjVPgZTr+pXrebFbmwRicECpNz6tojtRtawaOQflowEWK3+xnkmIQFWqI9DyBkABpmLq0fZgMB3AAAAAElFTkSuQmCC');
-              
+
         }
     }
- 
+
 
     // end header
     // start content 
-    
+
 
     .bordered-title {
-       
+
         &::after {
-             
+
             right: 0;
             left: initial;
         }
     }
 
-      
+
     // upcoming-events section
-     
-  
+
+
 
 
     .event-main-img {
-       
+
         .overlay {
-             
-            right: 0; 
-            left: initial; 
+
+            right: 0;
+            left: initial;
         }
     }
- 
+
 
     details.event-place-details[open] {
-        
-        padding-left: 10px; 
-        padding-right: 20px; 
+
+        padding-left: 10px;
+        padding-right: 20px;
     }
 
     details.event-admin-details {
-         
+
 
         summary::after {
-            
+
             left: 1%;
             right: initial;
         }
 
-       
+
 
         .event-admin .icon {
-             
+
             margin-left: 10px;
             margin-right: initial;
         }
@@ -2332,39 +2421,40 @@ header,
         }
     }
 
-   
+
     .tags-list {
         li {
             padding-left: initial;
             padding-right: 10px;
-           
+
             &:not(:first-child) {
-                
+
                 border-right: 1px solid $black;
-                border-left:0;
+                border-left: 0;
             }
         }
     }
 
     // calendar
-  
+
     #calendar {
-        
+
 
         .fc-event {
-          
+
             border-right: 3px solid #1DA1F2;
             border-left: 0;
         }
- 
+
     }
 
-     
- 
-    .course-card { 
-         
-        border-left:  1px solid $gray-300;
+
+
+    .course-card {
+
+        border-left: 1px solid $gray-300;
         border-right: 0;
+
         &:nth-child(4),
         &:nth-child(8),
         &:nth-child(12),
@@ -2376,14 +2466,14 @@ header,
         }
     }
 
-     
-    // Start subscribe 
-    .subscribe-sec { 
 
-        .sec-decp { 
+    // Start subscribe 
+    .subscribe-sec {
+
+        .sec-decp {
             padding: 5% 20% 5% 30px;
         }
- 
+
 
         .form-control {
             margin: 10px 0 10px 20px;
@@ -2393,103 +2483,102 @@ header,
     // end subscribe 
 
     // start About us
-  
- 
+
+
     .custom-ul {
         li {
-           
+
             padding-right: 50px;
             padding-left: initial;
 
             &::before {
-               
+
                 left: initial;
                 right: 0;
-                 
+
             }
 
             &::after {
                 right: 0;
-                left: initial; 
+                left: initial;
             }
         }
     }
 
     // End About us
-     
+
     // Start Profile
-   
+
 
     .file-upload-wrapper {
 
-        
+
 
         img {
-             
-            margin-left: 10px; 
-            margin-right: 0px; 
+
+            margin-left: 10px;
+            margin-right: 0px;
         }
     }
- 
+
 
     // End Profile
- 
-   
+
+
 
     // forms 
-  
 
     select.form-control {
-       
+
         padding-left: 40px;
         padding-right: 0.5rem;
         background: no-repeat left 10px center / 15px url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAOVBMVEUAAAD/gAD/dgD/bQD/YAD9bAD8bgD8bQD8bQD9bAD8bQD8bgD7bQD7bAD8bAD8bQD8bQD8bAD///9gTiOVAAAAEnRSTlMADA0OEJCSk5iZmpvFxufn6eq+T+OpAAAAAWJLR0QSe7xsAAAAAEdJREFUGNNjYKAi4GFG5bPwMrAJsiCLMPFzMaCKMYJEUMQY+bggDLgYIx8nTBIqhiQCFUMRAYuhiTAwcAsIcKA7mZ2VgQYAADtDAcvjns0qAAAAAElFTkSuQmCC');
-      
+
     }
- 
+
     // Start Events
     .filter-row {
-        
+
         select.form-control {
-        
+
             background: #F7F7F7 no-repeat left 10px center / 15px url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAOVBMVEUAAACAgICJiYmSkpKAgJ+BgY+AgZGAgJKBgZKAgo+AgZCAgJGAgJGAgZB/gZGAgZF/gZCAgpH////ayDNCAAAAEnRSTlMADA0OEJCSk5iZmpvFxufn6eq+T+OpAAAAAWJLR0QSe7xsAAAAAEdJREFUGNNjYKAi4GFG5bPwMrAJsiCLMPFzMaCKMYJEUMQY+bggDLgYIx8nTBIqhiQCFUMRAYuhiTAwcAsIcKA7mZ2VgQYAADtDAcvjns0qAAAAAElFTkSuQmCC');
         }
     }
- 
+
     // End Content
     // Start Footer
- 
+
 
     footer {
-        
-            .social-links {
-                padding-left: 30px;
-                border-left: initial;
-                margin-left: initial;
-                padding-right: 30px;
-                border-right: 1px solid $gray-300;
-                margin-right: auto;
-            }
-        
+
+        .social-links {
+            padding-left: 30px;
+            border-left: initial;
+            margin-left: initial;
+            padding-right: 30px;
+            border-right: 1px solid $gray-300;
+            margin-right: auto;
+        }
+
     }
- 
- 
+
+
 
     @media (max-width: 991.98px) {
 
         /* NavBar */
-        .navbar-collapse {  
-            right: 0; 
-            left:auto;
+        .navbar-collapse {
+            right: 0;
+            left: auto;
         }
- 
+
         .navbar-brand {
             margin-left: 5px;
             margin-right: 0;
         }
 
         .course-card {
-            
+
             &:nth-child(even) {
 
                 border-right: 1px solid #dee2e6;
@@ -2497,10 +2586,10 @@ header,
 
             }
         }
- 
-     
-        .copyrights-social {  
-            .social-links { 
+
+
+        .copyrights-social {
+            .social-links {
                 margin-left: initial !important;
                 margin-right: initial !important;
                 border-right: 0 !important;
@@ -2511,15 +2600,15 @@ header,
 
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 992px) and (max-width: 1200px) {
- 
+
         .course-card:nth-child(4),
         .course-card:nth-child(8),
         .course-card:nth-child(12),
         .course-card:nth-child(16),
         .course-card:nth-child(20),
         .course-card:nth-child(24) {
-            border-left: 1px solid #dee2e6; 
-            border-right:0;
+            border-left: 1px solid #dee2e6;
+            border-right: 0;
         }
 
         .course-card:nth-child(3),
@@ -2528,49 +2617,47 @@ header,
         .course-card:nth-child(12),
         .course-card:nth-child(15),
         .course-card:nth-child(18) {
-            border-left: 0; 
-            border-right: 1px solid #dee2e6 ; 
+            border-left: 0;
+            border-right: 1px solid #dee2e6;
 
         }
     }
 
     // Small devices (landscape phones, less than 768px)
     @media (max-width: 767.98px) {
-       
+
 
         .course-card {
 
-            &:not(:first-child) { 
+            &:not(:first-child) {
                 border-left: 0;
-                 border-right: 1px solid #dee2e6 ;
+                border-right: 1px solid #dee2e6;
             }
 
             &:first-child {
                 border-left: 0;
-                 border-right: 1px solid #dee2e6 ;
+                border-right: 1px solid #dee2e6;
             }
 
 
         }
- 
-        
+
+
     }
 
     // Small devices (landscape phones, less than 576px)
     @media (max-width: 575px) {}
 
     @media (max-width: 425px) {
-      
-        .share-btns {  
+
+        .share-btns {
             left: 10px;
             right: auto;
         }
 
     }
 
-    @media (max-width: 375px) {
-        
-    }
-    
+    @media (max-width: 375px) {}
+
 
 }

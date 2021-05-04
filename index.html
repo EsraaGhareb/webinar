@@ -19,12 +19,21 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" media="all"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/tempusdominus-bootstrap-4.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-core.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-bootstrap.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-daygrid.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-list.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/calender/calender-timegrid.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/tempusdominus-bootstrap-4.min.css" /> 
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.3.0/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" />
     <!-- for Arabic style  -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style-ar.css" /> -->
@@ -69,7 +78,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact-us.html">Contact Us</a>
                             </li>
-                            <li class="nav-item search-item">
+                            <!-- <li class="nav-item search-item">
 
                                 <div class="menu-srch">
                                     <a class="nav-link search-lnk" href="JavaScript:Void(0);"> <i
@@ -82,17 +91,17 @@
                                         <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="d-flex align-items-center">
 
                         <div class="auth-lnks d-flex">
                             <a href="#" class="google-store">
-                                ar
+                                EN
                             </a>
                             <a href="#" class="app-store">
-                                en
+                                AR
                             </a>
 
                         </div>
@@ -226,7 +235,7 @@
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6">
-                            <div class="event-card soon-card">
+                            <div class="event-card finished-card">
                                 <h5 class="card-title">Information Tech Course</h5>
                                 <div class=" d-flex justify-content-between align-items-center border-bottom flex-wrap">
                                     <h6 class="event-date d-flex mb-3 text-primary "><span class="mr-2">12 Dec -
@@ -249,10 +258,9 @@
                                             data-src="assets/images/person-icon.png" class="lazyload" alt="">
                                         <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
                                     </div>
-                                    <button class="btn btn-light-success mw-auto mh-auto my-2" type="button" disabled>
-                                        <img src="assets/images/clock.svg" data-src="assets/images/clock.svg"
-                                            class="lazyload icon" alt="">
-                                        <span class="">soon</span>
+                                    <button class="btn btn-light-danger mw-auto mh-auto my-2" type="button" disabled>
+                                        <i class="fas fa-check"></i>
+                                        <span class="">finished</span>
                                     </button>
                                 </div>
                             </div>
@@ -272,10 +280,10 @@
                         <form>
                             <div class="form-row justify-content-center align-items-center">
                                 <div class="form-group col-lg-3 col-md-6 ">
-                                    <input type="text" class="form-control datepicker" placeholder="Date">
+                                    <input type="date" class="form-control datepicker" placeholder="Date">
                                 </div>
                                 <div class="form-group col-lg-3 col-md-6 ">
-                                    <input type="text" class="form-control timepicker" placeholder="Time">
+                                    <input type="time" class="form-control timepicker" placeholder="Time">
                                 </div>
                                 <div class="form-group col-lg-2 col-md-6">
                                     <button type="submit" class="btn btn-primary text-white">
@@ -542,8 +550,13 @@
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                        placeholder="Password">
+                                    <div class="password-wrapper">
+                                        <input type="password" id="inputPassword" class="form-control"
+                                            placeholder="Password">
+                                        <button class="togglePass hide" type="button">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="text-center py-2">
                                     <!-- <button type="submit" class="text-white btn btn-primary w-100">
@@ -561,16 +574,20 @@
                                     Account</a>
                             </div>
                             <div class="text-center">
-                                <span class="my-3 OR">OR</span>
+                                <span class="my-3 OR">OR Login with</span>
                             </div>
                             <div class="socail-logins d-flex justify-content-center py-2">
+                                <a href="#" class="btn d-flex align-items-center linkedin">
+                                    <i class="fab fa-linkedin "></i>
+                                    linkedin
+                                </a>
                                 <a href="#" class="btn d-flex align-items-center google">
                                     <i class="fab fa-google "></i>
-                                    Login with Google
+                                    Google
                                 </a>
                                 <a href="#" class="btn d-flex align-items-center facebook">
                                     <i class="fab fa-facebook "></i>
-                                    Login with Facebook
+                                    Facebook
                                 </a>
                             </div>
                         </div>
@@ -599,8 +616,13 @@
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                        placeholder="Password">
+                                    <div class="password-wrapper">
+                                        <input type="password" id="inputPassword" class="form-control"
+                                            placeholder="Password">
+                                        <button class="togglePass hide" type="button">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="text-center py-2">
                                     <button type="submit" class="text-white btn btn-primary w-100">
@@ -613,16 +635,20 @@
                                 receive our newsletter, which you can unsubscribe to at any time.
                             </div>
                             <div class="text-center">
-                                <span class="my-3 OR">OR</span>
+                                <span class="my-3 OR">OR Login with</span>
                             </div>
                             <div class="socail-logins d-flex justify-content-center py-2">
+                                <a href="#" class="btn d-flex align-items-center linkedin">
+                                    <i class="fab fa-linkedin "></i>
+                                    linkedin
+                                </a>
                                 <a href="#" class="btn d-flex align-items-center google">
                                     <i class="fab fa-google "></i>
-                                    Login with Google
+                                    Google
                                 </a>
                                 <a href="#" class="btn d-flex align-items-center facebook">
                                     <i class="fab fa-facebook "></i>
-                                    Login with Facebook
+                                    Facebook
                                 </a>
                             </div>
                             <div class="text-black-50 text-center mt-2">
@@ -651,46 +677,52 @@
     <!-- partial -->
     <script src="assets/js/moment.js"></script>
     <script src="assets/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="assets/js/calender/calender-core.js"></script>
-    <script src="assets/js/calender/calender-bootstrap.js"></script>
-    <script src="assets/js/calender/calender-daygrid.js"></script>
-    <script src="assets/js/calender/calender-google.js"></script>
-    <script src="assets/js/calender/calender-interaction.js"></script>
-    <script src="assets/js/calender/calender-list.js"></script>
-    <script src="assets/js/calender/calender-timegrid.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.1/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.1/locales/ar.js"></script>
 
     <script src="assets/js/main.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
+        document.addEventListener("DOMContentLoaded", function () {
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
 
+            var calendarEl = document.getElementById("calendar");
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['dayGrid', 'list', 'googleCalendar'],
+                plugins: ["interaction", "dayGrid", "timeGrid", "resourceTimeline"],
                 header: {
-                    left: 'prev',
-                    center: 'title',
-                    right: 'next'
+                    left: "prev,next today",
+                    center: "title",
+                    right: "dayGridMonth,timeGridWeek,timeGridDay"
                 },
-
-                displayEventTime: false, // don't show the time column in list view
-
-                // THIS KEY WON'T WORK IN PRODUCTION!!!
-                // To make your own Google API key, follow the directions here:
-                // http://fullcalendar.io/docs/google_calendar/
-                googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
-
-                // US Holidays
-                events: 'en.usa#holiday@group.v.calendar.google.com',
-
-                eventClick: function (arg) {
-
-                    // opens events in a popup window
-                    // window.open(arg.event.url, '_blank', 'width=700,height=600');
-
-                    // prevents current tab from navigating
-                    arg.jsEvent.preventDefault();
-                }
-
+                editable: true,
+                events: [{
+                        title: "Sales Meeting",
+                        start: new Date(y, m, 2, 10, 30),
+                        end: new Date(y, m, 2, 11, 30),
+                        allDay: false
+                    },
+                    {
+                        title: "Marketing Meeting",
+                        start: new Date(y, m, 3, 11, 30),
+                        end: new Date(y, m, 3, 12, 30),
+                        allDay: false
+                    },
+                    {
+                        title: "Production Meeting",
+                        start: new Date(y, m, 4, 15, 30),
+                        end: new Date(y, m, 4, 16, 30),
+                        allDay: false
+                    }
+                ]
             });
 
             calendar.render();

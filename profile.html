@@ -19,9 +19,21 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" media="all"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel='stylesheet' href='https://fullcalendar.io/releases/core/4.0.2/main.min.css'>
-    <link rel='stylesheet' href='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.css'>
-    <link rel='stylesheet' href='https://fullcalendar.io/releases/list/4.0.1/main.min.css'>
+       <link rel="stylesheet" type="text/css" media="screen" href="assets/css/tempusdominus-bootstrap-4.min.css" /> 
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.3.0/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" />
     <!-- for Arabic style  -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style-ar.css" /> -->
@@ -66,7 +78,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="contact-us.html">Contact Us</a>
                             </li>
-                            <li class="nav-item search-item">
+                            <!-- <li class="nav-item search-item">
                                 <div class="menu-srch">
                                     <a class="nav-link search-lnk" href="JavaScript:Void(0);"> <i
                                             class="fas fa-search mx-2"></i>
@@ -79,17 +91,17 @@
                                     </div>
                                 </div>
 
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="d-flex align-items-center">
 
                         <div class="auth-lnks d-flex">
                             <a href="#" class="google-store">
-                                ar
+                                EN
                             </a>
                             <a href="#" class="app-store">
-                                en
+                                AR
                             </a>
 
                         </div>
@@ -128,22 +140,24 @@
                                 <div class=" card-body ">
                                     <div class="py-3">
                                         <div class="media file-upload-wrapper">
-                                            <img id="img-preview" src="assets/images/person-icon.png"
-                                                data-src="assets/images/person-icon.png" class="lazyload " alt="" />
+                                            <div>
+                                                <img id="img-preview" src="assets/images/person-icon.png"
+                                                    data-src="assets/images/person-icon.png" class="lazyload " alt="" />
+
+                                                <input type="file" name="file" id="InputUpload"
+                                                    class="profile-img-upload" accept="image/*"
+                                                    onchange="readURL(this);">
+                                                <label for="InputUpload"
+                                                    class="upload-icon btn btn-link text-primary mw-auto mh-auto py-1 px-0">
+                                                    <u>change pic</u>
+                                                </label>
+                                            </div>
                                             <div class="media-body">
                                                 <h5 class="font-weight-bold">Israa Ghareeb</h5>
                                                 <a href="mailto:esraagharebmohamed@gmail.com"
                                                     class="mb-2 text-primary email d-block">
                                                     esraa@gmail.com</a>
-                                                <div>
-                                                    <input type="file" name="file" id="InputUpload"
-                                                        class="profile-img-upload" accept="image/*"
-                                                        onchange="readURL(this);">
-                                                    <label for="InputUpload"
-                                                        class="upload-icon btn btn-primary text-white mw-auto mh-auto py-1 px-4">
-                                                        Edit
-                                                    </label>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="py-4">
@@ -160,7 +174,13 @@
                                                         id="pills-saved-events-tab" data-toggle="pill"
                                                         href="#pills-saved-events" role="tab"
                                                         aria-controls="pills-saved-events" aria-selected="false">Saved
-                                                        Events</a>
+                                                        Events <small class="text-danger">(13)</small></a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link my-2 font-weight-medium py-2"
+                                                        id="pills-my-calendar-tab" data-toggle="pill"
+                                                        href="#pills-my-calendar" role="tab"
+                                                        aria-controls="pills-my-calendar" aria-selected="false">My Calendar</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -201,8 +221,16 @@
                                                             Password</label>
                                                         <a href="#" class="text-primary"> Change </a>
                                                     </div>
-                                                    <input type="password" id="inputPassword" class="form-control my-1"
-                                                        placeholder="Password" value="00000">
+                                                    <!-- <input type="password" id="inputPassword" class="" -->
+                                                    <!-- placeholder="Password"> -->
+                                                    <div class="password-wrapper">
+                                                        <input type="password" id="inputPassword"
+                                                            class="form-control my-1" placeholder="Password"
+                                                            value="00000">
+                                                        <button class="togglePass hide" type="button">
+                                                            <i class="far fa-eye"></i>
+                                                        </button>
+                                                    </div>
                                                 </div>
 
                                             </form>
@@ -217,7 +245,7 @@
                                     <div class="events-cards">
                                         <div class="event-card p-1 d-flex ">
                                             <div class="card-header px-2 border-0 bg-transparent">
-                                                <img src="assets/images/mo1.jpg" data-src="assets/images/mo1.jpg"
+                                                <img src="assets/images/usr.png" data-src="assets/images/usr.png"
                                                     class="event-img" alt="">
                                             </div>
                                             <div class="card-body px-1">
@@ -287,6 +315,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-my-calendar" role="tabpanel"
+                                    aria-labelledby="pills-my-calendar-tab">
+                                    <div id="calendar" style="height: 800px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -423,8 +455,13 @@
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                        placeholder="Password">
+                                    <div class="password-wrapper">
+                                        <input type="password" id="inputPassword" class="form-control"
+                                            placeholder="Password">
+                                        <button class="togglePass hide" type="button">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="text-center py-2">
                                     <!-- <button type="submit" class="text-white btn btn-primary w-100">
@@ -442,16 +479,20 @@
                                     Account</a>
                             </div>
                             <div class="text-center">
-                                <span class="my-3 OR">OR</span>
+                                <span class="my-3 OR">OR Login with</span>
                             </div>
                             <div class="socail-logins d-flex justify-content-center py-2">
+                                <a href="#" class="btn d-flex align-items-center linkedin">
+                                    <i class="fab fa-linkedin "></i>
+                                    linkedin
+                                </a>
                                 <a href="#" class="btn d-flex align-items-center google">
                                     <i class="fab fa-google "></i>
-                                    Login with Google
+                                    Google
                                 </a>
                                 <a href="#" class="btn d-flex align-items-center facebook">
                                     <i class="fab fa-facebook "></i>
-                                    Login with Facebook
+                                    Facebook
                                 </a>
                             </div>
                         </div>
@@ -480,8 +521,13 @@
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                        placeholder="Password">
+                                    <div class="password-wrapper">
+                                        <input type="password" id="inputPassword" class="form-control"
+                                            placeholder="Password">
+                                        <button class="togglePass hide" type="button">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="text-center py-2">
                                     <button type="submit" class="text-white btn btn-primary w-100">
@@ -494,16 +540,20 @@
                                 receive our newsletter, which you can unsubscribe to at any time.
                             </div>
                             <div class="text-center">
-                                <span class="my-3 OR">OR</span>
+                                <span class="my-3 OR">OR Login with</span>
                             </div>
                             <div class="socail-logins d-flex justify-content-center py-2">
+                               <a href="#" class="btn d-flex align-items-center linkedin">
+                                    <i class="fab fa-linkedin "></i>
+                                    linkedin
+                                </a>
                                 <a href="#" class="btn d-flex align-items-center google">
                                     <i class="fab fa-google "></i>
-                                    Login with Google
+                                    Google
                                 </a>
                                 <a href="#" class="btn d-flex align-items-center facebook">
                                     <i class="fab fa-facebook "></i>
-                                    Login with Facebook
+                                    Facebook
                                 </a>
                             </div>
                             <div class="text-black-50 text-center mt-2">
@@ -530,14 +580,60 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- partial -->
-    <script src='https://fullcalendar.io/releases/core/4.0.2/main.min.js'></script>
-    <script src='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.js'></script>
-    <script src='https://fullcalendar.io/releases/list/4.0.1/main.min.js'></script>
-    <script src='https://fullcalendar.io/releases/google-calendar/4.0.1/main.min.js'></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.1/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.1/locales/ar.js"></script>
 
     <script src="assets/js/main.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
 
+            var calendarEl = document.getElementById("calendar");
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ["interaction", "dayGrid", "timeGrid", "resourceTimeline"],
+                header: {
+                    left: "prev,next today",
+                    center: "title",
+                    right: "dayGridMonth,timeGridWeek,timeGridDay"
+                },
+                editable: true,
+                events: [{
+                        title: "Sales Meeting",
+                        start: new Date(y, m, 2, 10, 30),
+                        end: new Date(y, m, 2, 11, 30),
+                        allDay: false
+                    },
+                    {
+                        title: "Marketing Meeting",
+                        start: new Date(y, m, 3, 11, 30),
+                        end: new Date(y, m, 3, 12, 30),
+                        allDay: false
+                    },
+                    {
+                        title: "Production Meeting",
+                        start: new Date(y, m, 4, 15, 30),
+                        end: new Date(y, m, 4, 16, 30),
+                        allDay: false
+                    }
+                ]
+            });
+
+            calendar.render();
+        });
+    </script>
 </body>
 
 </html>

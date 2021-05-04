@@ -11149,7 +11149,6 @@ img {
   display: block;
   z-index: 1;
   position: relative;
-  background-color: #fff;
   color: #adb5bd;
 }
 
@@ -11167,8 +11166,8 @@ img {
   content: "";
   position: relative;
   z-index: -1;
-  width: 40px;
-  height: 25px;
+  width: 40%;
+  height: 30px;
   display: block;
   margin: auto;
   margin-bottom: -30px;
@@ -11179,6 +11178,7 @@ img {
   border: 1px solid #e9ecef;
   margin: 5px;
   color: #fff;
+  min-width: 120px;
 }
 
 .socail-logins .btn i,
@@ -11370,6 +11370,29 @@ img {
   font-weight: 600;
 }
 
+.datepicker {
+  background: #F7F7F7 url("../images/date.png") no-repeat right 10px center/20px !important;
+}
+
+.datepicker::-webkit-inner-spin-button, .datepicker::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.timepicker {
+  background: #F7F7F7 url("../images/time.png") no-repeat right 10px center/20px !important;
+}
+
+.timepicker::-webkit-inner-spin-button, .timepicker::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.search {
+  background-image: url("../images/search-orange.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 10px center !important;
+  background-size: 20px  !important;
+}
+
 .find-event-form {
   margin: 45px 0;
 }
@@ -11406,11 +11429,11 @@ img {
 }
 
 .find-event-form .datepicker {
-  background: #F7F7F7 url("../images/date.png") no-repeat left 10px center/20px;
+  background: #F7F7F7 url("../images/date.png") no-repeat left 10px center/20px !important;
 }
 
 .find-event-form .timepicker {
-  background: #F7F7F7 url("../images/time.png") no-repeat left 10px center/20px;
+  background: #F7F7F7 url("../images/time.png") no-repeat left 10px center/20px !important;
 }
 
 .find-event-courses-form {
@@ -11560,6 +11583,10 @@ img {
 
 .event-card.soon-card {
   background-color: #FBFBFE;
+}
+
+.event-card.finished-card {
+  background-color: #fdedef;
 }
 
 .event-card .card-title {
@@ -11792,7 +11819,6 @@ summary {
 }
 
 #calendar {
-  width: 85%;
   margin: 40px auto;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -11843,15 +11869,29 @@ summary {
 
 #calendar .fc-button {
   border: 2px solid #ced4da;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 45px;
+  margin: 5px;
   color: #ced4da;
   background-color: transparent;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+#calendar .fc-button-active {
+  border-color: #FD8122;
+  color: #FD8122;
+}
+
+#calendar .fc-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #calendar .fc-scroller {
@@ -12288,6 +12328,22 @@ summary {
   -webkit-filter: brightness(0) invert(1);
 }
 
+.share-btns .btn-primary:focus,
+.share-btns .bg-primary:focus,
+.share-btns .btn-light-primary:focus,
+.share-btns .bg-light-primary:focus {
+  color: #fd8122;
+  background-color: #ffe6d3 !important;
+}
+
+.share-btns .active.btn-primary,
+.share-btns .active.bg-primary,
+.share-btns .active.btn-light-primary,
+.share-btns .active.bg-light-primary {
+  color: #ffe6d3;
+  background-color: #fd8122 !important;
+}
+
 .btn-light-secondary,
 .bg-light-secondary {
   color: #8D90FF;
@@ -12308,6 +12364,22 @@ summary {
 .bg-light-secondary:focus img {
   filter: brightness(0) invert(1);
   -webkit-filter: brightness(0) invert(1);
+}
+
+.share-btns .btn-secondary:focus,
+.share-btns .bg-secondary:focus,
+.share-btns .btn-light-secondary:focus,
+.share-btns .bg-light-secondary:focus {
+  color: #8d90ff;
+  background-color: #e8e9ff !important;
+}
+
+.share-btns .active.btn-secondary,
+.share-btns .active.bg-secondary,
+.share-btns .active.btn-light-secondary,
+.share-btns .active.bg-light-secondary {
+  color: #e8e9ff;
+  background-color: #8d90ff !important;
 }
 
 .btn-light-success,
@@ -12332,6 +12404,22 @@ summary {
   -webkit-filter: brightness(0) invert(1);
 }
 
+.share-btns .btn-success:focus,
+.share-btns .bg-success:focus,
+.share-btns .btn-light-success:focus,
+.share-btns .bg-light-success:focus {
+  color: #28a745;
+  background-color: #d4edda !important;
+}
+
+.share-btns .active.btn-success,
+.share-btns .active.bg-success,
+.share-btns .active.btn-light-success,
+.share-btns .active.bg-light-success {
+  color: #d4edda;
+  background-color: #28a745 !important;
+}
+
 .btn-light-info,
 .bg-light-info {
   color: #17a2b8;
@@ -12352,6 +12440,22 @@ summary {
 .bg-light-info:focus img {
   filter: brightness(0) invert(1);
   -webkit-filter: brightness(0) invert(1);
+}
+
+.share-btns .btn-info:focus,
+.share-btns .bg-info:focus,
+.share-btns .btn-light-info:focus,
+.share-btns .bg-light-info:focus {
+  color: #17a2b8;
+  background-color: #d1ecf1 !important;
+}
+
+.share-btns .active.btn-info,
+.share-btns .active.bg-info,
+.share-btns .active.btn-light-info,
+.share-btns .active.bg-light-info {
+  color: #d1ecf1;
+  background-color: #17a2b8 !important;
 }
 
 .btn-light-warning,
@@ -12376,6 +12480,22 @@ summary {
   -webkit-filter: brightness(0) invert(1);
 }
 
+.share-btns .btn-warning:focus,
+.share-btns .bg-warning:focus,
+.share-btns .btn-light-warning:focus,
+.share-btns .bg-light-warning:focus {
+  color: #ffc107;
+  background-color: #fff3cd !important;
+}
+
+.share-btns .active.btn-warning,
+.share-btns .active.bg-warning,
+.share-btns .active.btn-light-warning,
+.share-btns .active.bg-light-warning {
+  color: #fff3cd;
+  background-color: #ffc107 !important;
+}
+
 .btn-light-danger,
 .bg-light-danger {
   color: #dc3545;
@@ -12396,6 +12516,22 @@ summary {
 .bg-light-danger:focus img {
   filter: brightness(0) invert(1);
   -webkit-filter: brightness(0) invert(1);
+}
+
+.share-btns .btn-danger:focus,
+.share-btns .bg-danger:focus,
+.share-btns .btn-light-danger:focus,
+.share-btns .bg-light-danger:focus {
+  color: #dc3545;
+  background-color: #f8d7da !important;
+}
+
+.share-btns .active.btn-danger,
+.share-btns .active.bg-danger,
+.share-btns .active.btn-light-danger,
+.share-btns .active.bg-light-danger {
+  color: #f8d7da;
+  background-color: #dc3545 !important;
 }
 
 .btn-light-light,
@@ -12420,6 +12556,22 @@ summary {
   -webkit-filter: brightness(0) invert(1);
 }
 
+.share-btns .btn-light:focus,
+.share-btns .bg-light:focus,
+.share-btns .btn-light-light:focus,
+.share-btns .bg-light-light:focus {
+  color: #f8f9fa;
+  background-color: #fefefe !important;
+}
+
+.share-btns .active.btn-light,
+.share-btns .active.bg-light,
+.share-btns .active.btn-light-light,
+.share-btns .active.bg-light-light {
+  color: #fefefe;
+  background-color: #f8f9fa !important;
+}
+
 .btn-light-dark,
 .bg-light-dark {
   color: #343a40;
@@ -12440,6 +12592,22 @@ summary {
 .bg-light-dark:focus img {
   filter: brightness(0) invert(1);
   -webkit-filter: brightness(0) invert(1);
+}
+
+.share-btns .btn-dark:focus,
+.share-btns .bg-dark:focus,
+.share-btns .btn-light-dark:focus,
+.share-btns .bg-light-dark:focus {
+  color: #343a40;
+  background-color: #d6d8d9 !important;
+}
+
+.share-btns .active.btn-dark,
+.share-btns .active.bg-dark,
+.share-btns .active.btn-light-dark,
+.share-btns .active.bg-light-dark {
+  color: #d6d8d9;
+  background-color: #343a40 !important;
 }
 
 .form-control {
@@ -12471,6 +12639,21 @@ summary {
 
 .form-control ::placeholder {
   color: #808191;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .togglePass {
+  position: absolute;
+  border: none;
+  top: 0;
+  background: transparent;
+  height: 100%;
+  right: 10px;
+  color: #495057;
+  padding: 5px;
 }
 
 textarea.form-control {
@@ -13074,6 +13257,10 @@ header,
   left: auto;
 }
 
+.rtl .search {
+  background-position: left 10px center !important;
+}
+
 .rtl .navbar-toggler::after, .rtl .navbar-toggler::before {
   left: 7%;
   right: auto;
@@ -13108,17 +13295,25 @@ header,
   left: auto;
 }
 
+.rtl .datepicker {
+  background: #F7F7F7 url("../images/date.png") no-repeat left 10px center/20px !important;
+}
+
+.rtl .timepicker {
+  background: #F7F7F7 url("../images/time.png") no-repeat left 10px center/20px !important;
+}
+
 .rtl .find-event-form .form-control {
   padding-right: 40px;
   padding-left: initial;
 }
 
 .rtl .find-event-form .datepicker {
-  background: #F7F7F7 url("../images/date.png") no-repeat right 10px center/20px;
+  background: #F7F7F7 url("../images/date.png") no-repeat right 10px center/20px !important;
 }
 
 .rtl .find-event-form .timepicker {
-  background: #F7F7F7 url("../images/time.png") no-repeat right 10px center/20px;
+  background: #F7F7F7 url("../images/time.png") no-repeat right 10px center/20px !important;
 }
 
 .rtl .find-event-courses-form .search {

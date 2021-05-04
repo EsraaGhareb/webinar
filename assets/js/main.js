@@ -127,6 +127,24 @@ if ($("body").css("direction") == "rtl") {
       }
     });
   });
+
+  //  Toggle Password btn
+  $(".togglePass").click(function () {
+   let pass_wrapper = $(this).parents('.password-wrapper');
+   $(this).toggleClass('hide');
+   $(this).find('i, svg').toggleClass('fa-eye').toggleClass('fa-eye-slash');
+   if($(this).hasClass('hide')){
+    $(pass_wrapper).find(`.form-control`).attr('type' , 'password'); 
+   }else{
+    $(pass_wrapper).find(`.form-control`).attr('type' , 'text'); 
+   }
+  });
+  
+  //   share-btns 
+  $(".share-btns button").click(function () {
+    $(this).toggleClass("active"); 
+  });
+ 
   //   search btn
   $(".search-lnk").click(function () {
     $(".search-form").slideToggle(); 

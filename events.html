@@ -19,9 +19,21 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" media="all"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel='stylesheet' href='https://fullcalendar.io/releases/core/4.0.2/main.min.css'>
-    <link rel='stylesheet' href='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.css'>
-    <link rel='stylesheet' href='https://fullcalendar.io/releases/list/4.0.1/main.min.css'>
+       <link rel="stylesheet" type="text/css" media="screen" href="assets/css/tempusdominus-bootstrap-4.min.css" /> 
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.3.0/main.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.3.0/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/custom.css" />
     <!-- for Arabic style  -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style-ar.css" /> -->
@@ -66,7 +78,7 @@
                             <li class="nav-item">
                                 <a class="nav-link " aria-current="page" href="contact-us.html">Contact Us</a>
                             </li>
-                            <li class="nav-item search-item">
+                            <!-- <li class="nav-item search-item">
                                 <div class="menu-srch">
                                     <a class="nav-link search-lnk" href="JavaScript:Void(0);"> <i
                                             class="fas fa-search mx-2"></i>
@@ -78,17 +90,17 @@
                                         <button class="btn-search" type="submit"><i class="fas fa-search"></i></button>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="d-flex align-items-center">
 
                         <div class="auth-lnks d-flex">
                             <a href="#" class="google-store">
-                                ar
+                                EN
                             </a>
                             <a href="#" class="app-store">
-                                en
+                                AR
                             </a>
 
                         </div>
@@ -121,8 +133,8 @@
             <section id="events-pg" class="events-pg py-lg-5 my-4">
                 <div class="container">
                     <form action="#">
-                        <div class="row justify-content-center primary-row">
-                            <div class="form-group col-lg-3 col-md-4 col-sm-6">
+                        <div class="form-row justify-content-center primary-row">
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
                                 <label for="FilterByCategory">Filter By Category</label>
                                 <select name="FilterByCategory" id="FilterByCategory" class="form-control my-2"
                                     placeholder="Filter By Category">
@@ -132,7 +144,7 @@
                                     <option value="">Category</option>
                                 </select>
                             </div>
-                            <div class="form-group col-lg-3 col-md-4 col-sm-6">
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
                                 <label for="FilterByLocation">Filter By Location</label>
                                 <select name="FilterByLocation" id="FilterByLocation" class="form-control my-2"
                                     placeholder="Filter By Location">
@@ -142,15 +154,21 @@
                                     <option value="">Location</option>
                                 </select>
                             </div>
-                            <div class="form-group col-lg-3 col-md-4 col-sm-6">
-                                <label for="FilterByWebinar">Filter By Webinar</label>
-                                <select name="FilterByWebinar" id="FilterByWebinar" class="form-control my-2"
-                                    placeholder="Filter By Webinar">
-                                    <option value="">Webinar</option>
-                                    <option value="">Webinar</option>
-                                    <option value="">Webinar</option>
-                                    <option value="">Webinar</option>
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                                <label for="FilterByKeywords">Filter By Keywords</label>
+                                <select name="FilterByKeywords" id="FilterByKeywords" class="form-control my-2"
+                                    placeholder="Filter By Keywords">
+                                    <option value="">Keywords</option>
+                                    <option value="">Keywords</option>
+                                    <option value="">Keywords</option>
+                                    <option value="">Keywords</option>
                                 </select>
+                            </div>
+                            <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                                <label for="EventSearch">Search</label>
+                                <input name="EventSearch" id="EventSearch" class="form-control my-2 search"
+                                    placeholder="Search">
+
                             </div>
                         </div>
                         <div class="form-row justify-content-center filter-row">
@@ -171,14 +189,8 @@
                                 </select>
                             </div>
                             <div class="form-group col-lg-2 col-md-4 col-sm-6">
-                                <select name="StartDate" id="StartDate" class="form-control my-2"
+                                <input type="date" class="form-control datepicker my-2" name="StartDate" id="StartDate"
                                     placeholder="Start Date">
-                                    <option selected hidden disabled>Start Date</option>
-                                    <option value="">15 April</option>
-                                    <option value="">15 April</option>
-                                    <option value="">15 April</option>
-                                    <option value="">15 April</option>
-                                </select>
                             </div>
                             <div class="form-group col-lg-2 col-md-4 col-sm-6">
                                 <select name="Certificate" id="Certificate" class="form-control my-2"
@@ -203,25 +215,19 @@
                     </form>
                     <div class="filter-result-head mt-4 pt-4">
                         <div class="d-flex justify-content-between align-items-start flex-wrap">
-                            <h5 class="bordered-title "> Result : </h5>
 
-                            <div class="">
-                                <div class="d-flex align-items-center flex-wrap">
 
-                                    <button class="btn btn-primary text-white mx-sm-2 mx-1 " type="button">Join
-                                        Now</button>
+                            <div class="d-flex align-items-center flex-wrap">
 
-                                    <button class="btn btn-outline-primary mx-sm-2 mx-1 "
-                                        type="button">Instructors</button>
-
-                                    <select name="sortBy" id="sortBy"
-                                        class="form-control my-2 mx-sm-2 mx-1 w-auto mw-auto" placeholder="Sort By">
-                                        <option selected disabled hidden>Sort</option>
-                                        <option value="">Latest</option>
-                                        <option value="">Oldest</option>
-                                    </select>
-                                </div>
+                                <h5 class="bordered-title mb-0"> Result : </h5>
+                                <select name="sortBy" id="sortBy" class="form-control my-2  mx-3 w-auto mw-auto"
+                                    placeholder="Sort By">
+                                    <option selected disabled hidden>Sort By</option>
+                                    <option value="">Latest</option>
+                                    <option value="">Oldest</option>
+                                </select>
                             </div>
+
                             <div class="filter-display-shape">
                                 <button class="btn btn-link mw-auto mh-auto px-0 mx-2 list-display"> <i
                                         class="fas fa-bars fa-2x"></i></button>
@@ -236,10 +242,167 @@
                             <div class="row">
 
                                 <div class="col-lg-6">
-                                    <div class="event-card p-1 d-flex flex-wrap">
+                                    <div class="event-card finished-card p-1 d-flex flex-wrap">
 
                                         <div class="card-header px-2 border-0 bg-transparent">
-                                            <img src="assets/images/mo1.jpg" data-src="assets/images/mo1.jpg"
+                                            <img src="assets/images/usr.png" data-src="assets/images/usr.png"
+                                                class="event-img" alt="">
+                                        </div>
+
+                                        <div class="card-body px-1">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <div>
+                                                        <h5 class="card-title"><a href="event-details.html"> Information
+                                                                Tech Course </a></h5>
+                                                        <div
+                                                            class=" d-flex justify-content-between align-items-center flex-wrap">
+                                                            <h6 class="event-date d-flex mb-3 text-primary">
+                                                                <span class="mr-2">12
+                                                                    Dec -
+                                                                    2020</span> <span class="">20 : 45 PM</span>
+                                                            </h6>
+                                                            <h6
+                                                                class="event-duration d-flex align-items-center mb-3  ml-3">
+                                                                <img src="assets/images/timer.svg"
+                                                                    data-src="assets/images/timer.svg"
+                                                                    class="lazyload icon" alt="">
+                                                                <span class="">01 : 20 min</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class=" media event-place mb-2 align-items-center">
+                                                        <img src="assets/images/new-horzion.png"
+                                                            data-src="assets/images/new-horzion.png" class="lazyload "
+                                                            alt="">
+                                                        <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                                    </div>
+                                                    <div class="my-1 media event-admin align-items-center">
+                                                        <img src="assets/images/person-icon.png"
+                                                            data-src="assets/images/person-icon.png" class="lazyload"
+                                                            alt="">
+                                                        <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="d-flex flex-column share-btns">
+                                                        <button type="button"
+                                                            class="btn btn-light-primary btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bell"></i></button>
+                                                        <button type="button"
+                                                            class="btn btn-light-secondary btn-icon mw-auto m-1 py-1"><i
+                                                                class="fas fa-share-alt"></i> </button>
+                                                        <button type="button"
+                                                            class="btn btn-light-success btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bookmark"></i> </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-flex py-3">
+                                                <a href="#"
+                                                    class="btn btn-light-danger  mw-auto mh-auto ml-0 mr-md-3 mr-1"
+                                                    disabled>
+                                                    <i class="fas fa-check"></i>
+                                                    <span class="">finished</span>
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-outline-primary mw-auto mh-auto ml-0 mr-md-3 mr-1">
+                                                    Add To Calendar
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-icon btn-outline-primary mw-auto mh-auto ml-0 mr-md-3 mr-1">
+                                                    <i class="fas fa-video"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="event-card soon-card p-1 d-flex flex-wrap">
+
+                                        <div class="card-header px-2 border-0 bg-transparent">
+                                            <img src="assets/images/usr.png" data-src="assets/images/usr.png"
+                                                class="event-img" alt="">
+                                        </div>
+
+                                        <div class="card-body px-1">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <div>
+                                                        <h5 class="card-title"><a href="event-details.html"> Information
+                                                                Tech Course </a></h5>
+                                                        <div
+                                                            class=" d-flex justify-content-between align-items-center flex-wrap">
+                                                            <h6 class="event-date d-flex mb-3 text-primary">
+                                                                <span class="mr-2">12
+                                                                    Dec -
+                                                                    2020</span> <span class="">20 : 45 PM</span>
+                                                            </h6>
+                                                            <h6
+                                                                class="event-duration d-flex align-items-center mb-3  ml-3">
+                                                                <img src="assets/images/timer.svg"
+                                                                    data-src="assets/images/timer.svg"
+                                                                    class="lazyload icon" alt="">
+                                                                <span class="">01 : 20 min</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class=" media event-place mb-2 align-items-center">
+                                                        <img src="assets/images/new-horzion.png"
+                                                            data-src="assets/images/new-horzion.png" class="lazyload "
+                                                            alt="">
+                                                        <h6 class="mb-0 mx-2"> New Horizons </h6>
+                                                    </div>
+                                                    <div class="my-1 media event-admin align-items-center">
+                                                        <img src="assets/images/person-icon.png"
+                                                            data-src="assets/images/person-icon.png" class="lazyload"
+                                                            alt="">
+                                                        <h6 class="mb-0 mx-2">Mohammed Ahmed</h6>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="d-flex flex-column share-btns">
+                                                        <button type="button"
+                                                            class="btn btn-light-primary btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bell"></i></button>
+                                                        <button type="button"
+                                                            class="btn btn-light-secondary btn-icon mw-auto m-1 py-1"><i
+                                                                class="fas fa-share-alt"></i> </button>
+                                                        <button type="button"
+                                                            class="btn btn-light-success btn-icon mw-auto m-1 py-1"><i
+                                                                class="far fa-bookmark"></i> </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-flex py-3">
+                                                <a href="#"
+                                                    class="btn btn-light-success  mw-auto mh-auto ml-0 mr-md-3 mr-1"
+                                                    disabled>
+                                                    <img src="assets/images/clock.svg" data-src="assets/images/clock.svg"
+                                                    class="lazyload icon" alt="">
+                                                    <span class="">soon</span>
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-outline-primary mw-auto mh-auto ml-0 mr-md-3 mr-1">
+                                                    Add To Calendar
+                                                </a>
+                                                <a href="#"
+                                                    class="btn btn-icon btn-outline-primary mw-auto mh-auto ml-0 mr-md-3 mr-1">
+                                                    <i class="fas fa-video"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="event-card soon-card p-1 d-flex flex-wrap">
+
+                                        <div class="card-header px-2 border-0 bg-transparent">
+                                            <img src="assets/images/usr.png" data-src="assets/images/usr.png"
                                                 class="event-img" alt="">
                                         </div>
 
@@ -312,10 +475,10 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="event-card p-1 d-flex flex-wrap">
+                                    <div class="event-card watchnow-card p-1 d-flex flex-wrap">
 
                                         <div class="card-header px-2 border-0 bg-transparent">
-                                            <img src="assets/images/mo1.jpg" data-src="assets/images/mo1.jpg"
+                                            <img src="assets/images/usr.png" data-src="assets/images/usr.png"
                                                 class="event-img" alt="">
                                         </div>
 
@@ -372,7 +535,7 @@
                                             <div class="d-flex py-3">
                                                 <a href="#"
                                                     class="btn btn-primary mw-auto mh-auto ml-0 mr-md-3 mr-1 text-white">
-                                                    join Event
+                                                    watch now
                                                 </a>
                                                 <a href="#"
                                                     class="btn btn-outline-primary mw-auto mh-auto ml-0 mr-md-3 mr-1">
@@ -521,8 +684,13 @@
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                        placeholder="Password">
+                                    <div class="password-wrapper">
+                                        <input type="password" id="inputPassword" class="form-control"
+                                            placeholder="Password">
+                                        <button class="togglePass hide" type="button">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="text-center py-2">
                                     <!-- <button type="submit" class="text-white btn btn-primary w-100">
@@ -540,16 +708,20 @@
                                     Account</a>
                             </div>
                             <div class="text-center">
-                                <span class="my-3 OR">OR</span>
+                                <span class="my-3 OR">OR Login with</span>
                             </div>
                             <div class="socail-logins d-flex justify-content-center py-2">
+                                <a href="#" class="btn d-flex align-items-center linkedin">
+                                    <i class="fab fa-linkedin "></i>
+                                    linkedin
+                                </a>
                                 <a href="#" class="btn d-flex align-items-center google">
                                     <i class="fab fa-google "></i>
-                                    Login with Google
+                                    Google
                                 </a>
                                 <a href="#" class="btn d-flex align-items-center facebook">
                                     <i class="fab fa-facebook "></i>
-                                    Login with Facebook
+                                    Facebook
                                 </a>
                             </div>
                         </div>
@@ -578,8 +750,13 @@
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" id="inputPassword" class="form-control"
-                                        placeholder="Password">
+                                    <div class="password-wrapper">
+                                        <input type="password" id="inputPassword" class="form-control"
+                                            placeholder="Password">
+                                        <button class="togglePass hide" type="button">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="text-center py-2">
                                     <button type="submit" class="text-white btn btn-primary w-100">
@@ -592,16 +769,20 @@
                                 receive our newsletter, which you can unsubscribe to at any time.
                             </div>
                             <div class="text-center">
-                                <span class="my-3 OR">OR</span>
+                                <span class="my-3 OR">OR Login with</span>
                             </div>
                             <div class="socail-logins d-flex justify-content-center py-2">
+                                <a href="#" class="btn d-flex align-items-center linkedin">
+                                    <i class="fab fa-linkedin "></i>
+                                    linkedin
+                                </a>
                                 <a href="#" class="btn d-flex align-items-center google">
                                     <i class="fab fa-google "></i>
-                                    Login with Google
+                                    Google
                                 </a>
                                 <a href="#" class="btn d-flex align-items-center facebook">
                                     <i class="fab fa-facebook "></i>
-                                    Login with Facebook
+                                    Facebook
                                 </a>
                             </div>
                             <div class="text-black-50 text-center mt-2">
@@ -628,10 +809,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- partial -->
-    <script src='https://fullcalendar.io/releases/core/4.0.2/main.min.js'></script>
-    <script src='https://fullcalendar.io/releases/daygrid/4.0.1/main.min.js'></script>
-    <script src='https://fullcalendar.io/releases/list/4.0.1/main.min.js'></script>
-    <script src='https://fullcalendar.io/releases/google-calendar/4.0.1/main.min.js'></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.1/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.3.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.3.1/locales/ar.js"></script>
 
     <script src="assets/js/main.js"></script>
 
