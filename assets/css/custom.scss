@@ -554,26 +554,30 @@ img {
 
 .datepicker {
     background: #F7F7F7 url('../images/date.png') no-repeat right 10px center / 20px !important;
+
     &::-webkit-inner-spin-button,
-    &::-webkit-calendar-picker-indicator{
+    &::-webkit-calendar-picker-indicator {
         opacity: 0;
     }
 }
 
 .timepicker {
     background: #F7F7F7 url('../images/time.png') no-repeat right 10px center / 20px !important;
+
     &::-webkit-inner-spin-button,
-    &::-webkit-calendar-picker-indicator{
+    &::-webkit-calendar-picker-indicator {
         opacity: 0;
     }
 }
+
 .search {
-     
-    background-image: url('../images/search-orange.svg')  !important;
+
+    background-image: url('../images/search-orange.svg') !important;
     background-repeat: no-repeat !important;
-    background-position: right 10px center !important ;
-    background-size: 20px  !important;
+    background-position: right 10px center !important;
+    background-size: 20px !important;
 }
+
 .find-event-form {
     margin: 45px 0;
 
@@ -595,6 +599,7 @@ img {
             color: #808191;
         }
     }
+
     .datepicker {
         background: #F7F7F7 url('../images/date.png') no-repeat left 10px center / 20px !important;
 
@@ -603,7 +608,7 @@ img {
     .timepicker {
         background: #F7F7F7 url('../images/time.png') no-repeat left 10px center / 20px !important;
     }
-  
+
 }
 
 .find-event-courses-form {
@@ -746,6 +751,7 @@ img {
     &.soon-card {
         background-color: #FBFBFE;
     }
+
     &.finished-card {
         background-color: #fdedef;
     }
@@ -891,7 +897,19 @@ img {
         }
     }
 }
-
+details.event-place-details{
+   
+    summary{
+        position: relative;
+        &::after{
+            
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-top: 5px;
+        }
+    }
+}
 details.event-place-details[open] {
     background-color: $gray-100;
     padding: 10px;
@@ -901,8 +919,52 @@ details.event-place-details[open] {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    
+    summary{ 
+        &::after{ 
+            content: "\f106";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-top: 5px;
+        }
+    }
+}
+.review-stars {
+  
+    padding: 0 10px;
+    position: relative;
+    &:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+    }
+    &:not(:checked) > label {
+    
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}&:not(:checked) > label:before {
+    content: '★ ';
+}
+&> input:checked ~ label {
+    color: #ffc700;    
+}
+&:not(:checked) > label:hover,
+&:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+& > input:checked + label:hover,
+& > input:checked + label:hover ~ label,
+& > input:checked ~ label:hover,
+& > input:checked ~ label:hover ~ label,
+& > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
 }
 
+ 
 details.event-admin-details {
     background-color: $gray-100;
     position: relative;
@@ -1151,6 +1213,54 @@ summary {
 
 }
 
+// Start Testmonials slider
+.testimonials-sec {
+
+    .testmonials-carousel {
+        padding-top: 40px;
+
+        img {
+            width: 100px !important;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            -webkit-border-radius: 50;
+            -moz-border-radius: 50;
+            -ms-border-radius: 50;
+            -o-border-radius: 50;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .04);
+        }
+
+        .testmonial-writer {}
+    }
+    background-color: rgba(253 ,129, 34 , 0.02);
+    
+}
+
+.owl-dots {
+    // margin-bottom: -20px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+
+    .owl-dot {
+        width: 16px;
+        height: 5px;
+        margin: 6px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        background-color: theme-color-level(primary, -9) !important;
+
+        &.active {
+            background-color: theme-color(primary) !important;
+            width: 80px;
+        }
+    }
+}
+
 // Start Sponsers slider
 .sponsers-section {
     .sec-title {
@@ -1180,7 +1290,7 @@ summary {
 // End Sponsers Slider 
 // Start subscribe 
 .subscribe-sec {
-    margin: 50px 0;
+    // margin: 50px 0;
 
     .sec-decp {
         height: 100%;
@@ -1483,6 +1593,9 @@ $value in $theme-colors {
     .bg-light-#{$color} {
         color: theme-color($color);
         background-color: theme-color-level($color, -10);
+    }
+
+    .btn-light-#{$color} {
 
         &:hover,
         &:active,
@@ -1498,23 +1611,25 @@ $value in $theme-colors {
     }
 
     .share-btns {
+
         .btn-#{$color}:focus,
         .bg-#{$color}:focus,
         .btn-light-#{$color}:focus,
         .bg-light-#{$color}:focus {
-            color:theme-color-level($color, 0);
-            background-color:  theme-color-level($color, -10) !important;
- 
+            color: theme-color-level($color, 0);
+            background-color: theme-color-level($color, -10) !important;
+
         }
+
         .active.btn-#{$color},
         .active.bg-#{$color},
         .active.btn-light-#{$color},
         .active.bg-light-#{$color} {
-            color:  theme-color-level($color, -10);
+            color: theme-color-level($color, -10);
             background-color: theme-color-level($color, 0) !important;
- 
+
         }
-       
+
     }
 }
 
@@ -1973,7 +2088,7 @@ header,
     }
 
     .subscribe-sec {
-        margin: 40px 0;
+        // margin: 40px 0;
 
         .sec-decp {
             padding: 5%;
@@ -2250,9 +2365,10 @@ header,
             left: auto;
         }
     }
-    .search { 
-        background-position: left 10px center !important ;
-      
+
+    .search {
+        background-position: left 10px center !important;
+
     }
 
     /* menu togglar button */
@@ -2317,14 +2433,16 @@ header,
         }
 
     }
+
     .datepicker {
         background: #F7F7F7 url('../images/date.png') no-repeat left 10px center / 20px !important;
-       
+
     }
 
     .timepicker {
         background: #F7F7F7 url('../images/time.png') no-repeat left 10px center / 20px !important;
     }
+
     .find-event-form {
 
         .form-control {
@@ -2333,6 +2451,7 @@ header,
             padding-left: initial;
 
         }
+
         .datepicker {
             background: #F7F7F7 url('../images/date.png') no-repeat right 10px center / 20px !important;
         }

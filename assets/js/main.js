@@ -112,6 +112,18 @@ if ($("body").css("direction") == "rtl") {
       },
     },
   });
+  $(".testmonials-carousel").owlCarousel({
+    items: 1,
+    autoplay: !0,
+    slideBy: 1,
+    rtl: rtl, 
+    autoplayHoverPause: !0,
+    mouseDrag: !0,
+    nav: !1,
+    dots: !0,
+    stagePadding: 10,
+     
+  });
   $(function () {
     return $(".modal").on("show.bs.modal", function () {
       var curModal;
