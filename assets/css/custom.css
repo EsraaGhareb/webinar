@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11779,12 +11778,16 @@ details.event-place-details[open] summary::after {
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 22px;
   color: #ccc;
+  margin: 1px;
 }
 
 .review-stars:not(:checked) > label:before {
-  content: '★ ';
+  content: '\f005 ';
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "Font Awesome 5 Free";
 }
 
 .review-stars > input:checked ~ label {
@@ -11851,7 +11854,7 @@ summary {
 }
 
 .rate {
-  color: #808191;
+  color: #ccc;
 }
 
 .rate .active {
@@ -11860,6 +11863,27 @@ summary {
 
 .rate .reviews-nums {
   color: #adb5bd;
+}
+
+.course-reviews .course-review .reviewer-name {
+  font-size: 20px;
+  position: relative;
+  font-weight: 600;
+}
+
+.course-reviews .course-review .reviewer-name:before {
+  content: '\f10d ';
+  font-size: 60px;
+  font-weight: 800;
+  position: absolute;
+  right: 0;
+  opacity: 0.1;
+  color: #adb5bd;
+  font-family: "Font Awesome 5 Free";
+}
+
+.course-reviews .course-review .stars-rate .checked {
+  color: #c59b08;
 }
 
 .tags-list li {

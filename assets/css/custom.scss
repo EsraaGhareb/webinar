@@ -897,12 +897,14 @@ img {
         }
     }
 }
-details.event-place-details{
-   
-    summary{
+
+details.event-place-details {
+
+    summary {
         position: relative;
-        &::after{
-            
+
+        &::after {
+
             content: "\f107";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
@@ -910,6 +912,7 @@ details.event-place-details{
         }
     }
 }
+
 details.event-place-details[open] {
     background-color: $gray-100;
     padding: 10px;
@@ -919,9 +922,9 @@ details.event-place-details[open] {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    
-    summary{ 
-        &::after{ 
+
+    summary {
+        &::after {
             content: "\f106";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
@@ -929,42 +932,56 @@ details.event-place-details[open] {
         }
     }
 }
+
 .review-stars {
-  
+
     padding: 0 10px;
     position: relative;
-    &:not(:checked) > input {
-        position:absolute;
-        top:-9999px;
+
+    &:not(:checked)>input {
+        position: absolute;
+        top: -9999px;
     }
-    &:not(:checked) > label {
-    
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}&:not(:checked) > label:before {
-    content: '★ ';
-}
-&> input:checked ~ label {
-    color: #ffc700;    
-}
-&:not(:checked) > label:hover,
-&:not(:checked) > label:hover ~ label {
-    color: #deb217;  
-}
-& > input:checked + label:hover,
-& > input:checked + label:hover ~ label,
-& > input:checked ~ label:hover,
-& > input:checked ~ label:hover ~ label,
-& > label:hover ~ input:checked ~ label {
-    color: #c59b08;
-}
+
+    &:not(:checked)>label {
+
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 22px;
+        color: #ccc;
+        margin: 1px;
+    }
+
+    &:not(:checked)>label:before {
+        content: '\f005 ';
+        font-size: 20px;
+        font-weight: 800;
+        font-family: "Font Awesome 5 Free";
+    }
+
+    &>input:checked~label {
+        color: #ffc700;
+
+    }
+
+    &:not(:checked)>label:hover,
+    &:not(:checked)>label:hover~label {
+        color: #deb217;
+
+    }
+
+    &>input:checked+label:hover,
+    &>input:checked+label:hover~label,
+    &>input:checked~label:hover,
+    &>input:checked~label:hover~label,
+    &>label:hover~input:checked~label {
+        color: #c59b08;
+    }
 }
 
- 
+
 details.event-admin-details {
     background-color: $gray-100;
     position: relative;
@@ -1012,7 +1029,7 @@ summary {
 }
 
 .rate {
-    color: #808191;
+    color:#ccc;
 
     .active {
         color: #FFCC00;
@@ -1022,7 +1039,30 @@ summary {
         color: $gray-500;
     }
 }
-
+.course-reviews{
+    .course-review{
+        .reviewer-name{
+            font-size: 20px;
+            position: relative;
+            font-weight: 600;
+            &:before{
+                content: '\f10d ';
+                font-size: 60px;
+                font-weight: 800;
+                position: absolute;
+                right:0;
+                opacity: 0.1;
+                color: $gray-500; ;
+                font-family: "Font Awesome 5 Free";   
+            }
+        }
+        .stars-rate{
+            .checked{
+                color: #c59b08;
+            }
+        }
+    }
+}
 .tags-list {
     li {
         padding-right: 10px;
@@ -1233,8 +1273,9 @@ summary {
 
         .testmonial-writer {}
     }
-    background-color: rgba(253 ,129, 34 , 0.02);
-    
+
+    background-color: rgba(253, 129, 34, 0.02);
+
 }
 
 .owl-dots {
